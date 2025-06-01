@@ -464,8 +464,8 @@ function startCountdown(hours = 24) {
     }, 1000);
 }
 
-// Activate 2-hour countdown for the current offer
-startCountdown(2);
+// Activate 30-minute countdown for the current offer
+startCountdown(0.5);
 
 // Hero Slides Functionality
 let currentSlide = 1;
@@ -617,4 +617,83 @@ function generateResponse(userMessage) {
 
     // Default response
     return "I can help with questions about protocols, tiers, the New Internet infrastructure, tokens, benefits, or how the Syndicate Ledger works. What specific aspect would you like to know more about?";
+}
+
+// Newsletter Subscription
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.getElementById('newsletterForm');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('newsletterEmail').value;
+            const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+
+            // Show loading state
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'SUBSCRIBING...';
+            submitBtn.disabled = true;
+
+            // Simulate subscription (replace with actual API call)
+            setTimeout(() => {
+                // Success state
+                submitBtn.textContent = '✅ SUBSCRIBED';
+                submitBtn.style.background = 'linear-gradient(135deg, #059669 0%, #10b981 100%)';
+
+                // Clear form
+                document.getElementById('newsletterEmail').value = '';
+
+                // Show success message
+                const successMsg = document.createElement('p');
+                successMsg.textContent = `🚀 Welcome to the Syndicate! You'll receive protocol updates at ${email}`;
+                successMsg.style.color = '#10b981';
+                successMsg.style.fontSize = '14px';
+                successMsg.style.marginTop = '12px';
+
+                newsletterForm.appendChild(successMsg);
+
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = 'linear-gradient(135deg, #9333EA 0%, #A855F7 100%)';
+                    submitBtn.disabled = false;
+
+                    if (successMsg.parentNode) {
+                        successMsg.remove();
+                    }
+                }, 3000);
+
+            }, 1500);
+        });
+    }
+});
+
+// Tier selection function
+function selectTier(tierNumber) {
+    const tierNames = {
+        1: 'Angel ($100)',
+        2: 'Builder ($250)',
+        3: 'Architect ($500)',
+        4: 'Syndicate ($1,000)',
+        5: 'Inner Ledger ($2,500+)'
+    }
+
+    const tierName = tierNames[tierNumber]
+
+    // Show selection confirmation with payment details
+    const paymentInfo = `You selected: ${tierName}
+
+Payment Options:
+🍎 Apple Pay - Contact for setup
+💸 Cash App - $supplydemandshowroom
+   (Visit: https://cash.app/$supplydemandshowroom)
+₿ Crypto - USDC/ETH/BTC accepted
+
+Next Steps:
+1. Text/Call: +1 (313) 352-9003
+2. Complete payment via preferred method
+3. Receive dashboard access within 24 hours`
+
+    alert(paymentInfo)
 }

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syndicate Dashboard - 4 Commas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <div class="dashboard-nav">
+                <div class="brand">
+                    <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="logo-image">
+                    <div class="brand-stack">
+                        <span class="tagline">SYNDICATE DASHBOARD</span>
+                    </div>
+                </div>
+                <div class="user-menu">
+                    <span class="user-greeting" id="userGreeting">Welcome, Member</span>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <main class="dashboard-main">
+            <!-- User Status Card -->
+            <section class="status-card">
+                <div class="status-header">
+                    <h2>🏛️ Your Syndicate Status</h2>
+                    <div class="tier-badge" id="tierBadge">ARCHITECT</div>
+                </div>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <span class="status-label">Member Since</span>
+                        <span class="status-value" id="memberSince">December 2024</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Contribution</span>
+                        <span class="status-value" id="contribution">$500</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Protocols Access</span>
+                        <span class="status-value" id="protocolAccess">15+ Active</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Profit Share</span>
+                        <span class="status-value" id="profitShare">1%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Protocol Portfolio -->
+            <section class="protocol-portfolio">
+                <h3>🧭 Your Protocol Portfolio</h3>
+                <div class="portfolio-grid">
+                    <div class="protocol-card">
+                        <div class="protocol-header">
+                            <span class="protocol-name">.signatureai</span>
+                            <span class="protocol-status active">ACTIVE</span>
+                        </div>
+                        <div class="protocol-stats">
+                            <div class="stat">
+                                <span class="stat-label">Subdomains</span>
+                                <span class="stat-value">3</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Revenue</span>
+                                <span class="stat-value">$1,240</span>
+                            </div>
+                        </div>
+                        <button class="protocol-btn">Manage</button>
+                    </div>
+
+                    <div class="protocol-card">
+                        <div class="protocol-header">
+                            <span class="protocol-name">.textme</span>
+                            <span class="protocol-status active">ACTIVE</span>
+                        </div>
+                        <div class="protocol-stats">
+                            <div class="stat">
+                                <span class="stat-label">Subdomains</span>
+                                <span class="stat-value">2</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Revenue</span>
+                                <span class="stat-value">$890</span>
+                            </div>
+                        </div>
+                        <button class="protocol-btn">Manage</button>
+                    </div>
+
+                    <div class="protocol-card">
+                        <div class="protocol-header">
+                            <span class="protocol-name">.madeinusa</span>
+                            <span class="protocol-status launching">LAUNCHING</span>
+                        </div>
+                        <div class="protocol-stats">
+                            <div class="stat">
+                                <span class="stat-label">Subdomains</span>
+                                <span class="stat-value">1</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Revenue</span>
+                                <span class="stat-value">$0</span>
+                            </div>
+                        </div>
+                        <button class="protocol-btn">Prepare</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Earnings Overview -->
+            <section class="earnings-overview">
+                <h3>💰 Earnings Overview</h3>
+                <div class="earnings-grid">
+                    <div class="earnings-card">
+                        <div class="earnings-header">
+                            <h4>Total Earnings</h4>
+                            <span class="earnings-period">All Time</span>
+                        </div>
+                        <div class="earnings-amount">$2,130</div>
+                        <div class="earnings-change positive">+15.2% this month</div>
+                    </div>
+                    <div class="earnings-card">
+                        <div class="earnings-header">
+                            <h4>This Month</h4>
+                            <span class="earnings-period">December 2024</span>
+                        </div>
+                        <div class="earnings-amount">$340</div>
+                        <div class="earnings-change positive">+8.5% vs last month</div>
+                    </div>
+                    <div class="earnings-card">
+                        <div class="earnings-header">
+                            <h4>Next Payout</h4>
+                            <span class="earnings-period">January 15</span>
+                        </div>
+                        <div class="earnings-amount">$127</div>
+                        <div class="earnings-change">Quarterly distribution</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h3>⚡ Quick Actions</h3>
+                <div class="actions-grid">
+                    <button class="action-btn">
+                        <span class="action-icon">🏗️</span>
+                        <span class="action-text">Mint Subdomain</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">🤖</span>
+                        <span class="action-text">Deploy Agent</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">📊</span>
+                        <span class="action-text">View Analytics</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">⬆️</span>
+                        <span class="action-text">Upgrade Tier</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <h3>📈 Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">💰</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Profit Distribution Received</div>
+                            <div class="activity-desc">$127 from .signatureai protocol</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🚀</div>
+                        <div class="activity-content">
+                            <div class="activity-title">New Protocol Launch</div>
+                            <div class="activity-desc">.madeinusa entering beta phase</div>
+                            <div class="activity-time">1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">🏗️</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Subdomain Minted</div>
+                            <div class="activity-desc">john.signatureai successfully created</div>
+                            <div class="activity-time">3 days ago</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

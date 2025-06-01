@@ -175,7 +175,7 @@
 
                         <div class="countdown-timer-auction">
                             <span class="countdown-label">AUCTION ENDS IN</span>
-                            <div class="countdown-time" id="auction-countdown">01:24:30</div>
+                            <div class="countdown-time" id="auction-countdown">00:30:00</div>
                         </div>
 
                         <button class="track-cta urgent" onclick="openContact()">
@@ -735,6 +735,14 @@
                         <li>Syndicate NFT</li>
                         <li>Name on Protocol Wall</li>
                     </ul>
+                    <div class="payment-methods-mini">
+                        <span class="payment-label">Payment:</span>
+                        <div class="payment-icons">
+                            <span class="payment-icon" title="Apple Pay">🍎</span>
+                            <span class="payment-icon" title="Cash App">💸</span>
+                            <span class="payment-icon" title="Crypto">₿</span>
+                        </div>
+                    </div>
                     <button class="tier-button" onclick="selectTier('1')">
                         SELECT ANGEL
                     </button>
@@ -753,6 +761,14 @@
                         <li>Priority access to new launches</li>
                         <li>Builder status badge</li>
                     </ul>
+                    <div class="payment-methods-mini">
+                        <span class="payment-label">Payment:</span>
+                        <div class="payment-icons">
+                            <span class="payment-icon" title="Apple Pay">🍎</span>
+                            <span class="payment-icon" title="Cash App">💸</span>
+                            <span class="payment-icon" title="Crypto">₿</span>
+                        </div>
+                    </div>
                     <button class="tier-button" onclick="selectTier('2')">
                         SELECT BUILDER
                     </button>
@@ -1759,9 +1775,33 @@
             </div>
         </section>
 
+        <!-- Newsletter Section -->
+        <section class="newsletter" id="newsletter">
+            <div class="newsletter-content">
+                <h3>🚀 Stay Updated on Protocol Launches</h3>
+                <p>Get exclusive access to new protocol opportunities, syndicate updates, and early launch notifications.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input-group">
+                        <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                        <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                    </div>
+                    <p class="newsletter-disclaimer">No spam. Unsubscribe anytime. Protocol updates only.</p>
+                </form>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2024 4 Commas • The Sovereign Wealth Engine of the New Internet</p>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="contact.html" class="footer-link">Contact & Access</a>
+                    <a href="login.html" class="footer-link">Member Login</a>
+                    <a href="dashboard.html" class="footer-link">Dashboard</a>
+                    <a href="#newsletter" class="footer-link">Newsletter</a>
+                    <a href="#faq" class="footer-link">FAQ</a>
+                </div>
+                <p>&copy; 2024 4 Commas • The Sovereign Wealth Engine of the New Internet</p>
+            </div>
         </footer>
     </div>
 
