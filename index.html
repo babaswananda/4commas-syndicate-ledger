@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Commas - The Sovereign Wealth Engine of the New Internet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="The Digital Empire of Capital Mastery. Protocol-level fund deploying infrastructure, not startups. Where Capital Meets Code.">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="logo-image">
+                <div class="brand-stack">
+                    <span class="tagline">WHERE CAPITAL MEETS CODE</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#ecosystem" class="nav-link">Ecosystem</a>
+                <a href="#syndicate" class="nav-link">Syndicate</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+            </nav>
+            <div class="header-cta">
+                <div class="countdown-timer">
+                    <span class="countdown-label">OFFER EXPIRES IN</span>
+                    <div class="countdown-time" id="countdown">24:00:00</div>
+                </div>
+                <button class="header-btn" onclick="openContact()">JOIN SYNDICATE</button>
+            </div>
+        </header>
+
+        <!-- Hero Section - Money Glitch Cinematic -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <div class="money-rain"></div>
+                <div class="glitch-overlay"></div>
+                <div class="matrix-code"></div>
+                <canvas id="money-canvas"></canvas>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge">🔴 LIVE AUCTION GOING ON NOW... FOR A VERY EXCLUSIVE PROTOCOL</div>
+
+                <div class="hero-slides">
+                    <!-- Slide 1 -->
+                    <div class="hero-slide active" data-slide="1">
+                        <h1 class="hero-title">
+                            <span class="line" data-aos="fade-up" data-aos-delay="100">You've never seen an</span>
+                            <span class="line glitch-text" data-text="OPPORTUNITY" data-aos="fade-up" data-aos-delay="300">OPPORTUNITY</span>
+                            <span class="line" data-aos="fade-up" data-aos-delay="500">like this before.</span>
+                        </h1>
+                        <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="700">
+                            <p>Because it's not one.</p>
+                            <p>It's <strong class="purple-glow">infrastructure</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="hero-slide" data-slide="2">
+                        <h1 class="hero-title">
+                            <span class="line" data-aos="fade-up" data-aos-delay="100">You missed</span>
+                            <span class="line glitch-text" data-text="BITCOIN" data-aos="fade-up" data-aos-delay="300">BITCOIN</span>
+                            <span class="line" data-aos="fade-up" data-aos-delay="500">.</span>
+                        </h1>
+                        <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="700">
+                            <p>Don't miss this <strong class="purple-glow">protocol</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="hero-slide" data-slide="3">
+                        <h1 class="hero-title">
+                            <span class="line" data-aos="fade-up" data-aos-delay="100">This isn't your chance to</span>
+                            <span class="line glitch-text" data-text="BUY IN" data-aos="fade-up" data-aos-delay="300">BUY IN</span>
+                            <span class="line" data-aos="fade-up" data-aos-delay="500">.</span>
+                        </h1>
+                        <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="700">
+                            <p>This is your chance to <strong class="purple-glow">own it</strong>.</p>
+                            <p>You've never been this close to the source.</p>
+                            <p><strong class="money-glitch">Until now</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Navigation -->
+                <div class="slide-nav">
+                    <button class="slide-dot active" onclick="goToSlide(1)"></button>
+                    <button class="slide-dot" onclick="goToSlide(2)"></button>
+                    <button class="slide-dot" onclick="goToSlide(3)"></button>
+                </div>
+
+                <div class="value-matrix" data-aos="fade-up" data-aos-delay="900">
+                    <div class="value-item">
+                        <span class="value-number glitch-number" data-target="1000000000000">0</span>
+                        <span class="value-label">Trillionaire Vision</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-number glitch-number" data-target="∞">0</span>
+                        <span class="value-label">Protocol Returns</span>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-number glitch-number" data-target="6">0</span>
+                        <span class="value-label">Empire Divisions</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="1100">
+                    <button class="cta-primary money-button" onclick="openContact()">
+                        <span class="btn-text">ENTER THE MATRIX</span>
+                        <span class="btn-glitch" data-text="ENTER THE MATRIX">ENTER THE MATRIX</span>
+                    </button>
+                    <button class="cta-secondary" onclick="scrollToSection('ecosystem')">
+                        <span>Explore the Empire</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="floating-protocols">
+                <div class="protocol-orb" data-protocol=".conversational">
+                    <span class="orb-name">.conversational</span>
+                    <span class="orb-status">ACQUIRING</span>
+                </div>
+                <div class="protocol-orb" data-protocol=".codeledger">
+                    <span class="orb-name">.codeledger</span>
+                    <span class="orb-status">PIPELINE</span>
+                </div>
+                <div class="protocol-orb" data-protocol=".syndications">
+                    <span class="orb-name">.syndications</span>
+                    <span class="orb-status">PIPELINE</span>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Scroll to unlock the empire</span>
+            </div>
+        </section>
+
+        <!-- Dual Track Positioning Section -->
+        <section class="dual-track-positioning" id="positioning">
+            <div class="section-header">
+                <h2>🎯 Your Live Situation — Real-Time Protocol Strategy</h2>
+                <p>Two distinct opportunities. Two different approaches. Choose your path.</p>
+            </div>
+
+            <div class="track-comparison">
+                <div class="track urgent-track" data-aos="fade-up">
+                    <div class="track-badge urgent">🔥 LIVE AUCTION</div>
+                    <div class="track-content">
+                        <h3>Exclusive Protocol Asset</h3>
+                        <p class="track-description">Single high-value protocol opportunity currently up for auction. Genesis Backer access to secure the asset.</p>
+
+                        <div class="track-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Type:</span>
+                                <span class="detail-value">Individual protocol ownership</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Entry:</span>
+                                <span class="detail-value">$100 one-time</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Options:</span>
+                                <span class="detail-value">Lifetime profit participation OR High-return flip + protocol pass</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Status:</span>
+                                <span class="detail-value urgent-text">Auction ending soon</span>
+                            </div>
+                        </div>
+
+                        <div class="countdown-timer-auction">
+                            <span class="countdown-label">AUCTION ENDS IN</span>
+                            <div class="countdown-time" id="auction-countdown">01:24:30</div>
+                        </div>
+
+                        <button class="track-cta urgent" onclick="openContact()">
+                            SECURE PROTOCOL NOW
+                        </button>
+                    </div>
+                </div>
+
+                <div class="track ongoing-track" data-aos="fade-up" data-aos-delay="200">
+                    <div class="track-badge ongoing">🏛️ SYNDICATE LEDGER</div>
+                    <div class="track-content">
+                        <h3>Multi-Protocol Infrastructure Fund</h3>
+                        <p class="track-description">Infrastructure funding for the broader protocol portfolio. The real estate empire, not just one building.</p>
+
+                        <div class="track-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Type:</span>
+                                <span class="detail-value">Portfolio infrastructure access</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Entry:</span>
+                                <span class="detail-value">$100 - $2,500+ tiers</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Includes:</span>
+                                <span class="detail-value">Mint access, agent licenses, profit tailwinds</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Status:</span>
+                                <span class="detail-value ongoing-text">Ongoing enrollment</span>
+                            </div>
+                        </div>
+
+                        <div class="protocol-preview-mini">
+                            <h4>Portfolio Includes:</h4>
+                            <div class="mini-protocols">
+                                <span>.signatureai</span>
+                                <span>.textme</span>
+                                <span>.MadeinUSA</span>
+                                <span>.ftz</span>
+                                <span>.chamberofcommerce</span>
+                                <span>.superchip</span>
+                                <span>+12 more</span>
+                            </div>
+                        </div>
+
+                        <button class="track-cta ongoing" onclick="scrollToSection('tiers')">
+                            JOIN SYNDICATE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategic-distinction" data-aos="fade-up" data-aos-delay="400">
+                <h3>Strategic Distinction</h3>
+                <div class="distinction-grid">
+                    <div class="distinction-item">
+                        <span class="distinction-label">LIVE AUCTION:</span>
+                        <span class="distinction-value">Back a single protocol (e.g. .sonnet) — Individual ownership</span>
+                    </div>
+                    <div class="distinction-item">
+                        <span class="distinction-label">SYNDICATE LEDGER:</span>
+                        <span class="distinction-value">Back the protocol portfolio infrastructure — Empire access</span>
+                    </div>
+                </div>
+                <p class="distinction-note">This is your "whale is breaching" moment for .sonnet — the offer closes with that auction. Everything else lives under the Syndicate Ledger republic.</p>
+            </div>
+        </section>
+
+        <!-- Syndicate Ledger Section -->
+        <section class="syndicate-ledger" id="syndicate">
+            <div class="section-intro">
+                <h2 class="section-title">🌐 The Syndicate Ledger</h2>
+                <p class="section-subtitle">The Early Access Gateway to the New Internet</p>
+                <p class="new-internet-intro">You're not just backing domains — you're securing routes, agents, and protocol assets that power the next version of the internet.</p>
+            </div>
+
+            <div class="ledger-content">
+                <div class="new-internet-section">
+                    <h3>🌐 This is the New Internet — built on:</h3>
+                    <div class="new-internet-grid">
+                        <div class="internet-component">
+                            <span class="component-icon">🧠</span>
+                            <span class="component-text">AI agents instead of apps</span>
+                        </div>
+                        <div class="internet-component">
+                            <span class="component-icon">🌐</span>
+                            <span class="component-text">Protocol identities instead of profiles</span>
+                        </div>
+                        <div class="internet-component">
+                            <span class="component-icon">🪙</span>
+                            <span class="component-text">Utility coins + AI tokens instead of ad revenue</span>
+                        </div>
+                        <div class="internet-component">
+                            <span class="component-icon">📡</span>
+                            <span class="component-text">Decentralized routes instead of platforms</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="syndicate-stack">
+                    <h3>🧭 SYNDICATE LEDGER STACK</h3>
+                    <p class="stack-intro">The Real Infrastructure of the New Internet — Powered by Your Portfolio</p>
+                </div>
+
+                <div class="protocol-categories">
+                    <!-- Identity Protocols -->
+                    <div class="protocol-category">
+                        <h4>🧪 IDENTITY PROTOCOLS</h4>
+                        <p class="category-desc">Handles. Wallets. Logins. Reputation.<br><em>(Actual owned TLDs only)</em></p>
+                        <div class="protocol-list">
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.signatureai</span>
+                                <span class="protocol-desc">Agent signature identity for AI-native contracts</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.textme</span>
+                                <span class="protocol-desc">Messaging + wallet-integrated identity layer</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.mobilechat📱💬</span>
+                                <span class="protocol-desc">Mobile-native chat + identity platform</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.chiefvibeofficer</span>
+                                <span class="protocol-desc">Developer identity + operator credentials in the Vibe ecosystem</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.digitalidwallet</span>
+                                <span class="protocol-desc">Core digital ID and Web3 wallet infrastructure</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.biopassport</span>
+                                <span class="protocol-desc">Biometric and sovereign digital identity layer</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.kidschat</span>
+                                <span class="protocol-desc">Safe ID and messaging system for minors</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trade Infrastructure -->
+                    <div class="protocol-category">
+                        <h4>🏛️ TRADE INFRASTRUCTURE</h4>
+                        <p class="category-desc">Supply Chains. Manufacturing. Commerce Governance.</p>
+                        <div class="protocol-list">
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.chamberofcommerce</span>
+                                <span class="protocol-desc">Decentralized business registration + global trade maps</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.ftz</span>
+                                <span class="protocol-desc">Foreign Trade Zones for tax-exempt international commerce</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.madeinusa</span>
+                                <span class="protocol-desc">Operator Economy + verified U.S. production</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.maidenusa</span>
+                                <span class="protocol-desc">Apparel & soft goods microfactory layer</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.madeindetroit</span>
+                                <span class="protocol-desc">Regional manufacturing hub with relocation program</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.americanexport</span>
+                                <span class="protocol-desc">National export protocol</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.originverified</span>
+                                <span class="protocol-desc">Proof-of-origin labeling & export compliance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agent Networks -->
+                    <div class="protocol-category">
+                        <h4>🤖 AGENT NETWORKS</h4>
+                        <p class="category-desc">AI-as-a-Service. Wrappers. Intelligence Workflows.</p>
+                        <div class="protocol-list">
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.aiagents</span>
+                                <span class="protocol-desc">Master registry and marketplace for LLM-powered agents</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.mcpserver, .mcpclient, .mcpmarketplace</span>
+                                <span class="protocol-desc">Unified agent stack for deployment, orchestration, and monetization</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.agentos</span>
+                                <span class="protocol-desc">OS layer for conversational UIs + autonomous workflows</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.vibecoder</span>
+                                <span class="protocol-desc">Creator-coded, culturally tuned agents</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.commandline</span>
+                                <span class="protocol-desc">Terminal-based AI agent interface and automation</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.closingagent</span>
+                                <span class="protocol-desc">Real estate AI protocol</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.kidschat</span>
+                                <span class="protocol-desc">Safe AI for children</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.aicallcenter</span>
+                                <span class="protocol-desc">Voice-driven automation</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.chatlife</span>
+                                <span class="protocol-desc">Lifestyle mirroring & mood-aware companion AI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware & Compute Protocols -->
+                    <div class="protocol-category">
+                        <h4>🧠 HARDWARE & COMPUTE PROTOCOLS</h4>
+                        <p class="category-desc">Devices. GPUs. On-Device AI. Compute Routing.</p>
+                        <div class="protocol-list">
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.superchip</span>
+                                <span class="protocol-desc">Next-gen chip architecture for sovereign intelligence</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.neuralprocessor</span>
+                                <span class="protocol-desc">AI chip registration and monetization layer</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.parallelcomputer</span>
+                                <span class="protocol-desc">AI-native hardware identity & device logic</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.gpucloud</span>
+                                <span class="protocol-desc">Decentralized GPU rental and processing pool</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.businessmachines</span>
+                                <span class="protocol-desc">Equipment registry and Operator onboarding</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.plasticcards, .nfccards</span>
+                                <span class="protocol-desc">AI-enhanced physical cards for access/payment</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tokenization & Currency -->
+                    <div class="protocol-category">
+                        <h4>🪙 TOKENIZATION & CURRENCY LAYERS</h4>
+                        <p class="category-desc">Utility Coins. Debt. Meme Coins. Ownership Wrappers.</p>
+                        <div class="protocol-list">
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.utilitycoin</span>
+                                <span class="protocol-desc">Cross-protocol transaction token</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.aitokens</span>
+                                <span class="protocol-desc">Token generation + ownership metadata layer for agents</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.memecoinfactory</span>
+                                <span class="protocol-desc">Launchpad for culture-coded meme economies</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.fugio</span>
+                                <span class="protocol-desc">Time-backed financial mint (inspired by Franklin's currency)</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.creditorexchange</span>
+                                <span class="protocol-desc">Tokenized credit instruments & markets</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.securedcreditor</span>
+                                <span class="protocol-desc">Enforcement & recovery protocol</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.moneyglitch</span>
+                                <span class="protocol-desc">Public DeFi entry for asset-backed pools</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.debtpower</span>
+                                <span class="protocol-desc">Core node for leveraged financial acquisition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SaaS + Service Protocols -->
+                    <div class="protocol-category">
+                        <h4>🏗️ SaaS + SERVICE PROTOCOLS</h4>
+                        <p class="category-desc">Commerce Engines. Domains. Hosting. Operator Tools.</p>
+                        <div class="protocol-list">
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.handlestore</span>
+                                <span class="protocol-desc">Domain minting and resale with scarcity drops</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.hostdaddy</span>
+                                <span class="protocol-desc">Hosting + GPU/power resale for AI/crypto</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.mobilechat📱💬</span>
+                                <span class="protocol-desc">Mobile-native chat wallet infrastructure</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.streamnow, .ondemand</span>
+                                <span class="protocol-desc">AI streaming & content distribution stack</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.equityfirm</span>
+                                <span class="protocol-desc">Private equity deal flow + tokenization platform</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.monopolyboard</span>
+                                <span class="protocol-desc">Protocol control center & digital capital map</span>
+                            </div>
+                            <div class="protocol-item-detailed">
+                                <span class="protocol-name">.web3🌐, .registerdomains</span>
+                                <span class="protocol-desc">Registry infrastructure for HNS/Web3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-positioning">
+                    <h3>🏁 FINAL LAUNCH POSITIONING</h3>
+                    <div class="positioning-message">
+                        <p><strong>You're not just investing in domains.<br>
+                        You're claiming territory on the next internet — with full agent deployment, token rails, and verified trade infrastructure.</strong></p>
+                        <p class="positioning-tagline">This is digital real estate, protocol equity, and AI infrastructure in one.</p>
+                    </div>
+                </div>
+
+                    <div class="utility-coin-section">
+                        <h4>🪙 About the Utility Coin & AI Tokens</h4>
+                        <p>All protocols in this ecosystem will support:</p>
+                        <div class="token-features">
+                            <div class="token-feature">
+                                <span class="feature-icon">🪙</span>
+                                <span class="feature-text">A native Utility Coin (for minting, licensing, transactions)</span>
+                            </div>
+                            <div class="token-feature">
+                                <span class="feature-icon">🧠</span>
+                                <span class="feature-text">AI Tokens that wrap individual agents or platforms</span>
+                            </div>
+                            <div class="token-feature">
+                                <span class="feature-icon">🔄</span>
+                                <span class="feature-text">A future conversion path to equity via Syndicate-backed asset pools</span>
+                            </div>
+                        </div>
+                        <p class="token-note">This isn't a play-to-earn model. It's <strong>infrastructure-to-own</strong> — backed by protocol identity and utility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo-5 Educational Section -->
+        <section class="demo-walkthrough" id="demo">
+            <div class="demo-header">
+                <h2 class="demo-title">🪙 Welcome to the Syndicate Ledger</h2>
+                <p class="demo-subtitle">Secure the route. Power the protocol. Get rewarded.</p>
+            </div>
+
+            <div class="demo-content">
+                <div class="demo-step" data-aos="fade-up">
+                    <div class="step-icon">🛰️</div>
+                    <h3>What is the Syndicate Ledger?</h3>
+                    <div class="step-content">
+                        <p class="step-intro">Imagine if you could invest in roads before cars. In ports before ships. In silicon before the chip.</p>
+                        <p>The Syndicate Ledger lets you back the <strong>digital infrastructure of the new AI internet</strong> — before the world catches on.</p>
+                        <div class="highlight-box">
+                            <p>We're not selling tokens. We're not promising equity.<br>
+                            We're giving you early access to <strong>protocol tailwinds</strong> — namespace-level assets that generate utility, identity, and revenue across industries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-icon">🔗</div>
+                    <h3>So… What is a Route?</h3>
+                    <div class="step-content">
+                        <p>In this context, a "Route" is a <strong>protocol pathway</strong> — a top-level digital asset that connects identities, data, AI agents, commerce, or sovereign systems.</p>
+                        <p class="route-analogy">Each route is like owning a toll road in the digital world.</p>
+                        <div class="route-examples">
+                            <div class="route-item">
+                                <span class="route-name">.conversational</span>
+                                <span class="route-purpose">messaging & AI dialogue</span>
+                            </div>
+                            <div class="route-item">
+                                <span class="route-name">.codeledger</span>
+                                <span class="route-purpose">development infrastructure</span>
+                            </div>
+                            <div class="route-item">
+                                <span class="route-name">.syndications</span>
+                                <span class="route-purpose">capital coordination</span>
+                            </div>
+                            <div class="route-item">
+                                <span class="route-name">.govtdao</span>
+                                <span class="route-purpose">governance systems</span>
+                            </div>
+                        </div>
+                        <p class="route-note">When we secure a route, we're acquiring and deploying it <strong>before the mainstream sees its potential</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="demo-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-icon">⚙️</div>
+                    <h3>What Is the Syndicate's Role?</h3>
+                    <div class="step-content">
+                        <p>When you contribute to the Syndicate Ledger, you're doing one of three things:</p>
+                        <div class="syndicate-roles">
+                            <div class="role-item">
+                                <span class="role-number">1</span>
+                                <div class="role-content">
+                                    <h4>Securing the Route</h4>
+                                    <p>Backing a protocol's acquisition before it's live</p>
+                                </div>
+                            </div>
+                            <div class="role-item">
+                                <span class="role-number">2</span>
+                                <div class="role-content">
+                                    <h4>Fueling the Equipment</h4>
+                                    <p>Helping build the agent layer, subdomain structure, or platform interface</p>
+                                </div>
+                            </div>
+                            <div class="role-item">
+                                <span class="role-number">3</span>
+                                <div class="role-content">
+                                    <h4>Claiming Territory</h4>
+                                    <p>Minting your own subdomain, agent license, or access key early</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-step" data-aos="fade-up" data-aos-delay="600">
+                    <div class="step-icon">🏗️</div>
+                    <h3>Why It Matters (Infrastructure = Power)</h3>
+                    <div class="step-content">
+                        <div class="infrastructure-message">
+                            <p>This isn't about a website.<br>
+                            This is about <strong>protocol infrastructure</strong> — digital land and communication rails that become the foundation of future systems.</p>
+                            <p class="emphasis">You're not funding an idea.<br>
+                            You're helping secure the digital highways the future runs on.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-step" data-aos="fade-up" data-aos-delay="800">
+                    <div class="step-icon">🎖️</div>
+                    <h3>What Do You Get?</h3>
+                    <div class="step-content">
+                        <p>When you fund a tier, you are <strong>written into the protocol history</strong> — and rewarded for your role.</p>
+                        <div class="rewards-grid">
+                            <div class="reward-item">
+                                <span class="reward-icon">🪪</span>
+                                <span class="reward-text">Ledger Identity (your name encoded in the protocol wall)</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-icon">🛠️</span>
+                                <span class="reward-text">Subdomain + AI Agent License (mintable digital identities)</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-icon">💸</span>
+                                <span class="reward-text">Profit Flow Access (receive a % of monetization across protocols)</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-icon">🎟️</span>
+                                <span class="reward-text">Priority Launch Access (for all future namespace plays)</span>
+                            </div>
+                            <div class="reward-item">
+                                <span class="reward-icon">🧠</span>
+                                <span class="reward-text">Governance Input (on select protocol directions)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-conclusion" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="conclusion-content">
+                        <h3>🔐 Summary</h3>
+                        <div class="republic-message">
+                            <p><strong>You're not joining a platform.<br>
+                            You're securing the infrastructure of the New Internet.</strong></p>
+                        </div>
+                        <div class="one-liner">
+                            <p>Protocols are the new ports. Routes are the new roads. And you're getting in before the world catches on.</p>
+                        </div>
+                        <button class="demo-cta" onclick="scrollToSection('tiers')">
+                            Choose Your Tier
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Section -->
+        <section class="ecosystem">
+            <div class="section-header">
+                <span class="icon">🏛️</span>
+                <h3>THE SOVEREIGN ECOSYSTEM</h3>
+            </div>
+            <div class="divisions-grid">
+                <div class="division">
+                    <h4>🚀 Infinite Returns Ventures</h4>
+                    <p>Protocol capital deployment, not startup equity</p>
+                </div>
+                <div class="division">
+                    <h4>👑 Sovereign Operators</h4>
+                    <p>Elite capital class with exclusive deal flow</p>
+                </div>
+                <div class="division">
+                    <h4>🎯 4 Commas LIVE</h4>
+                    <p>Invite-only summits for capital operators</p>
+                </div>
+                <div class="division">
+                    <h4>🎮 The MonopolyBoard</h4>
+                    <p>Global venture map and investor portal</p>
+                </div>
+                <div class="division">
+                    <h4>🤖 SovereignAI + UnifiedAI</h4>
+                    <p>Agent intelligence layer across all deployments</p>
+                </div>
+                <div class="division">
+                    <h4>🌐 Platform Brands</h4>
+                    <p>Domain-native assets across all verticals</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Syndicate Tiers Section -->
+        <section class="syndicate-tiers">
+            <div class="section-header">
+                <span class="icon">◊</span>
+                <h3>CHOOSE YOUR TIER</h3>
+            </div>
+
+            <div class="tiers-grid">
+                <!-- Tier 1: Angel -->
+                <div class="tier tier-1">
+                    <div class="tier-header">
+                        <h4>TIER 1: ANGEL</h4>
+                        <div class="tier-price">$100</div>
+                        <span class="tier-desc">Support 1 key acquisition</span>
+                    </div>
+                    <ul class="tier-benefits">
+                        <li>1 subdomain + agent on protocol</li>
+                        <li>Early claim rights</li>
+                        <li>Syndicate NFT</li>
+                        <li>Name on Protocol Wall</li>
+                    </ul>
+                    <button class="tier-button" onclick="selectTier('1')">
+                        SELECT ANGEL
+                    </button>
+                </div>
+
+                <!-- Tier 2: Builder -->
+                <div class="tier tier-2">
+                    <div class="tier-header">
+                        <h4>TIER 2: BUILDER</h4>
+                        <div class="tier-price">$250</div>
+                        <span class="tier-desc">Fund multiple bids or package deals</span>
+                    </div>
+                    <ul class="tier-benefits">
+                        <li>2 subdomains on any future protocols</li>
+                        <li>Name on Protocol Wall</li>
+                        <li>Priority access to new launches</li>
+                        <li>Builder status badge</li>
+                    </ul>
+                    <button class="tier-button" onclick="selectTier('2')">
+                        SELECT BUILDER
+                    </button>
+                </div>
+
+                <!-- Tier 3: Architect -->
+                <div class="tier tier-3 featured">
+                    <div class="featured-badge">POPULAR</div>
+                    <div class="tier-header">
+                        <h4>TIER 3: ARCHITECT</h4>
+                        <div class="tier-price">$500</div>
+                        <span class="tier-desc">Acquire 2–3 strategic protocol assets</span>
+                    </div>
+                    <ul class="tier-benefits">
+                        <li>3 subdomains + agent suite</li>
+                        <li>1% profit participation across portfolio</li>
+                        <li>Architect status + exclusive updates</li>
+                        <li>Early access to protocol tools</li>
+                    </ul>
+                    <button class="tier-button" onclick="selectTier('3')">
+                        SELECT ARCHITECT
+                    </button>
+                </div>
+
+                <!-- Tier 4: Syndicate -->
+                <div class="tier tier-4">
+                    <div class="tier-header">
+                        <h4>TIER 4: SYNDICATE</h4>
+                        <div class="tier-price">$1,000</div>
+                        <span class="tier-desc">Expand control over 5+ core assets</span>
+                    </div>
+                    <ul class="tier-benefits">
+                        <li>5+ agents, early token access</li>
+                        <li>2% net yield on namespace monetization</li>
+                        <li>Syndicate member privileges</li>
+                        <li>Direct line to protocol updates</li>
+                    </ul>
+                    <button class="tier-button" onclick="selectTier('4')">
+                        SELECT SYNDICATE
+                    </button>
+                </div>
+
+                <!-- Tier 5: Inner Ledger -->
+                <div class="tier tier-5">
+                    <div class="tier-header">
+                        <h4>TIER 5: INNER LEDGER</h4>
+                        <div class="tier-price">$2,500+</div>
+                        <span class="tier-desc">Institutional-level contribution</span>
+                    </div>
+                    <ul class="tier-benefits">
+                        <li>Custom % of upside on entire portfolio</li>
+                        <li>Reserved protocol alias</li>
+                        <li>Launch seats + multi-agent provisioning</li>
+                        <li>Inner circle access</li>
+                    </ul>
+                    <button class="tier-button" onclick="selectTier('5')">
+                        SELECT INNER LEDGER
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Projections Section -->
+        <section class="roi-projections" id="roi">
+            <div class="section-header">
+                <span class="icon">📈</span>
+                <h3>ROI PROJECTIONS & VALUE CREATION</h3>
+                <p>Conservative estimates based on protocol monetization models</p>
+            </div>
+
+            <div class="roi-content">
+                <div class="roi-scenarios">
+                    <div class="scenario conservative" data-aos="fade-up">
+                        <div class="scenario-header">
+                            <h4>Conservative Scenario</h4>
+                            <span class="scenario-label">Year 1-2</span>
+                        </div>
+                        <div class="scenario-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Protocol Revenue</span>
+                                <span class="metric-value">$50K - $200K</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Angel ROI</span>
+                                <span class="metric-value roi-positive">5x - 10x</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Architect ROI</span>
+                                <span class="metric-value roi-positive">3x - 8x + 1% profit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario moderate featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="featured-badge">LIKELY</div>
+                        <div class="scenario-header">
+                            <h4>Moderate Scenario</h4>
+                            <span class="scenario-label">Year 2-3</span>
+                        </div>
+                        <div class="scenario-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Protocol Revenue</span>
+                                <span class="metric-value">$500K - $2M</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Angel ROI</span>
+                                <span class="metric-value roi-positive">15x - 50x</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Syndicate ROI</span>
+                                <span class="metric-value roi-positive">10x - 25x + 2% profit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario aggressive" data-aos="fade-up" data-aos-delay="400">
+                        <div class="scenario-header">
+                            <h4>Aggressive Scenario</h4>
+                            <span class="scenario-label">Year 3-5</span>
+                        </div>
+                        <div class="scenario-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Protocol Revenue</span>
+                                <span class="metric-value">$5M - $50M</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Angel ROI</span>
+                                <span class="metric-value roi-positive">100x - 500x</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Inner Ledger ROI</span>
+                                <span class="metric-value roi-positive">50x - 200x + custom %</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-drivers" data-aos="fade-up" data-aos-delay="600">
+                    <h4>Value Creation Drivers</h4>
+                    <div class="drivers-grid">
+                        <div class="driver-item">
+                            <span class="driver-icon">🤖</span>
+                            <div class="driver-content">
+                                <h5>AI Agent Licensing</h5>
+                                <p>Each protocol becomes a platform for AI agent deployment, generating recurring license fees</p>
+                            </div>
+                        </div>
+                        <div class="driver-item">
+                            <span class="driver-icon">🏗️</span>
+                            <div class="driver-content">
+                                <h5>Infrastructure Monetization</h5>
+                                <p>Protocol-level services create multiple revenue streams across industries</p>
+                            </div>
+                        </div>
+                        <div class="driver-item">
+                            <span class="driver-icon">🌐</span>
+                            <div class="driver-content">
+                                <h5>Subdomain Marketplace</h5>
+                                <p>Premium subdomains appreciate as protocol adoption grows exponentially</p>
+                            </div>
+                        </div>
+                        <div class="driver-item">
+                            <span class="driver-icon">📈</span>
+                            <div class="driver-content">
+                                <h5>Network Effects</h5>
+                                <p>Each new user increases the value of the entire protocol ecosystem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roi-calculator" data-aos="fade-up" data-aos-delay="800">
+                    <h4>Your Potential Returns</h4>
+                    <div class="calculator-grid">
+                        <div class="calc-tier">
+                            <h5>Angel ($100)</h5>
+                            <div class="calc-returns">
+                                <div class="return-item">
+                                    <span class="return-scenario">Conservative</span>
+                                    <span class="return-value">$500 - $1,000</span>
+                                </div>
+                                <div class="return-item">
+                                    <span class="return-scenario">Moderate</span>
+                                    <span class="return-value">$1,500 - $5,000</span>
+                                </div>
+                                <div class="return-item">
+                                    <span class="return-scenario">Aggressive</span>
+                                    <span class="return-value">$10,000 - $50,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-tier featured">
+                            <h5>Architect ($500)</h5>
+                            <div class="calc-returns">
+                                <div class="return-item">
+                                    <span class="return-scenario">Conservative</span>
+                                    <span class="return-value">$1,500 - $4,000 + profit %</span>
+                                </div>
+                                <div class="return-item">
+                                    <span class="return-scenario">Moderate</span>
+                                    <span class="return-value">$5,000 - $12,500 + profit %</span>
+                                </div>
+                                <div class="return-item">
+                                    <span class="return-scenario">Aggressive</span>
+                                    <span class="return-value">$25,000 - $100,000 + profit %</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-tier">
+                            <h5>Syndicate ($1,000)</h5>
+                            <div class="calc-returns">
+                                <div class="return-item">
+                                    <span class="return-scenario">Conservative</span>
+                                    <span class="return-value">$3,000 - $8,000 + 2% profit</span>
+                                </div>
+                                <div class="return-item">
+                                    <span class="return-scenario">Moderate</span>
+                                    <span class="return-value">$10,000 - $25,000 + 2% profit</span>
+                                </div>
+                                <div class="return-item">
+                                    <span class="return-scenario">Aggressive</span>
+                                    <span class="return-value">$50,000 - $200,000 + 2% profit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roi-disclaimer" data-aos="fade-up" data-aos-delay="1000">
+                    <p><strong>Disclaimer:</strong> These projections are estimates based on comparable protocol valuations and market analysis. Actual returns may vary. This is not financial advice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Protocol Licensing Framework Section -->
+        <section class="licensing-framework" id="licensing">
+            <div class="section-header">
+                <span class="icon">⚖️</span>
+                <h3>PROTOCOL LICENSING FRAMEWORK</h3>
+                <p>Every monetizable asset in the ecosystem — explained, packaged, and protected</p>
+            </div>
+
+            <div class="licensing-intro" data-aos="fade-up">
+                <div class="intro-content">
+                    <h4>You're building a protocol empire. Each namespace is an engine — and each engine has licensable components.</h4>
+                    <p>Every TLD (route) you own produces multiple revenue points. Here's how they break down:</p>
+                </div>
+            </div>
+
+            <div class="licensing-categories">
+                <div class="license-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <span class="category-icon">🌐</span>
+                        <h4>TLD Licensing (Namespace Access)</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="category-desc">Grant access to use the top-level domain (TLD) or create a wrapper brand/product on top of it.</p>
+                        <div class="monetization-methods">
+                            <h5>💸 Monetization Methods:</h5>
+                            <ul>
+                                <li>White-label licensing for third-party use (e.g. textme.com builds on .textme)</li>
+                                <li>Exclusive vertical rights (e.g. .signatureai licensed to luxury brands)</li>
+                                <li>International mirror rights (e.g. .chamberofcommerce licensed to national registries)</li>
+                            </ul>
+                        </div>
+                        <div class="deliverables">
+                            <h5>🧾 Deliverables:</h5>
+                            <ul>
+                                <li>Signed namespace access agreement</li>
+                                <li>Revenue share, flat license fee, or limited-term lease</li>
+                                <li>Use restrictions + on-chain tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <span class="category-icon">🪪</span>
+                        <h4>Subdomain Minting & Leasing</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="category-desc">Sell, lease, or assign subdomains under any TLD to individuals, brands, or AI agents.</p>
+                        <div class="monetization-methods">
+                            <h5>💸 Monetization Methods:</h5>
+                            <ul>
+                                <li>Flat-rate or auction-style subdomain sales (e.g. poet.sonnet, realtor.closingagent)</li>
+                                <li>Subscription-based leasing (e.g. $5–$50/month for handle/identity access)</li>
+                                <li>Premium tier minting (e.g. vanity, reserved, or legacy names)</li>
+                            </ul>
+                        </div>
+                        <div class="deliverables">
+                            <h5>🧾 Deliverables:</h5>
+                            <ul>
+                                <li>Smart contract + hosted agent environment</li>
+                                <li>Mint license terms or lease agreements</li>
+                                <li>Agent provisioning access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <span class="category-icon">🤖</span>
+                        <h4>AI Agent Licensing</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="category-desc">Deploy named, tone-matched AI agents under each protocol for customer service, real estate, poetry/writing, and commerce.</p>
+                        <div class="monetization-methods">
+                            <h5>💸 Monetization Methods:</h5>
+                            <ul>
+                                <li>SaaS licensing of agents (monthly per-seat or per-agent)</li>
+                                <li>Pre-trained agent subscriptions (e.g. "Claude.sonnet" style)</li>
+                                <li>Custom agent development for enterprise clients</li>
+                            </ul>
+                        </div>
+                        <div class="deliverables">
+                            <h5>🧾 Deliverables:</h5>
+                            <ul>
+                                <li>Agent license (per-user or per-brand)</li>
+                                <li>LLM hosting or plug-and-play via AgentOS</li>
+                                <li>Training interface or preset personalities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <span class="category-icon">🏗️</span>
+                        <h4>Infrastructure Access (Platform-as-a-Service)</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="category-desc">License access to operational platforms, manufacturing portals, FTZ systems, and B2B onboarding tools.</p>
+                        <div class="monetization-methods">
+                            <h5>💸 Monetization Methods:</h5>
+                            <ul>
+                                <li>Monthly subscription (PaaS / SaaS model)</li>
+                                <li>Revenue share with operators using your system</li>
+                                <li>Tokenized access tiers (if on-chain)</li>
+                            </ul>
+                        </div>
+                        <div class="deliverables">
+                            <h5>🧾 Deliverables:</h5>
+                            <ul>
+                                <li>Dashboard access license</li>
+                                <li>Branded interface</li>
+                                <li>Back-end onboarding tools + agent integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="licensing-categories-2">
+                <div class="license-category" data-aos="fade-up" data-aos-delay="500">
+                    <div class="category-header">
+                        <span class="category-icon">🏛️</span>
+                        <h4>Protocol-as-a-Brand Licensing</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="category-desc">Offer the entire protocol identity as a cultural or commercial asset — like franchising an entire ecosystem brand.</p>
+                        <div class="monetization-methods">
+                            <h5>💸 Monetization Methods:</h5>
+                            <ul>
+                                <li>National/territorial brand licensing (e.g. .MadeinUSA → licensed to Michigan)</li>
+                                <li>Co-branded retail deals</li>
+                                <li>Merchandising & publishing rights</li>
+                            </ul>
+                        </div>
+                        <div class="deliverables">
+                            <h5>🧾 Deliverables:</h5>
+                            <ul>
+                                <li>Brand playbook</li>
+                                <li>Merch license + e-comm assets</li>
+                                <li>Logo + TLD protection clause</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license-category" data-aos="fade-up" data-aos-delay="600">
+                    <div class="category-header">
+                        <span class="category-icon">📡</span>
+                        <h4>Data & Traffic Licensing</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="category-desc">License anonymized traffic data, search metrics, subdomain activity, or market analytics from protocol dashboards.</p>
+                        <div class="monetization-methods">
+                            <h5>💸 Monetization Methods:</h5>
+                            <ul>
+                                <li>Analytics subscriptions (for B2B or agencies)</li>
+                                <li>Paid API access for external devs</li>
+                                <li>White-labeled data layers for private clients</li>
+                            </ul>
+                        </div>
+                        <div class="deliverables">
+                            <h5>🧾 Deliverables:</h5>
+                            <ul>
+                                <li>API key access</li>
+                                <li>Dataset access terms</li>
+                                <li>Traffic segmentation controls</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license-category" data-aos="fade-up" data-aos-delay="700">
+                    <div class="category-header">
+                        <span class="category-icon">💼</span>
+                        <h4>Enterprise Integration Licensing</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="category-desc">Deploy TLDs inside enterprise or government infrastructure — offering namespace + AI integration at scale.</p>
+                        <div class="monetization-methods">
+                            <h5>💸 Monetization Methods:</h5>
+                            <ul>
+                                <li>GovTech contracts</li>
+                                <li>White-labeled platforms for cities, chambers, or agencies</li>
+                                <li>AI agent deployment into CRMs, legacy tools, etc.</li>
+                            </ul>
+                        </div>
+                        <div class="deliverables">
+                            <h5>🧾 Deliverables:</h5>
+                            <ul>
+                                <li>MSA (Master Services Agreement)</li>
+                                <li>Onboarding documentation</li>
+                                <li>AI agent customization + support package</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license-category featured" data-aos="fade-up" data-aos-delay="800">
+                    <div class="featured-badge">PREMIUM</div>
+                    <div class="category-header">
+                        <span class="category-icon">📦</span>
+                        <h4>Bundled Protocol Licensing</h4>
+                    </div>
+                    <div class="category-content">
+                        <p class="category-desc">Offer packages of multiple TLDs, agents, and platforms for large clients or institutions.</p>
+                        <div class="monetization-methods">
+                            <h5>💸 Monetization Methods:</h5>
+                            <ul>
+                                <li>Institutional licensing bundles (e.g. .MadeinUSA + .chamberofcommerce + .FTZ)</li>
+                                <li>Full-stack operator packages (white-labeled SaaS + dashboard)</li>
+                                <li>National infrastructure partnerships</li>
+                            </ul>
+                        </div>
+                        <div class="deliverables">
+                            <h5>🧾 Deliverables:</h5>
+                            <ul>
+                                <li>Tiered agreement</li>
+                                <li>Custom dashboard + namespace toolkit</li>
+                                <li>Governance API or agent orchestration system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="licensing-terms" data-aos="fade-up" data-aos-delay="900">
+                <h4>🧠 Licensing Language (Terms)</h4>
+                <div class="terms-grid">
+                    <div class="terms-use">
+                        <h5>✅ Use phrases like:</h5>
+                        <ul>
+                            <li>"Namespace Access License"</li>
+                            <li>"Agent Use Rights"</li>
+                            <li>"Minting & Commercial Utility License"</li>
+                            <li>"Protocol Participation Package"</li>
+                            <li>"Syndicate-Led Infrastructure License"</li>
+                        </ul>
+                    </div>
+                    <div class="terms-avoid">
+                        <h5>❌ Stay away from:</h5>
+                        <ul>
+                            <li>"Ownership"</li>
+                            <li>"Token sale"</li>
+                            <li>"Equity offering"</li>
+                        </ul>
+                        <p class="terms-note">Unless those are intentionally tokenized, and you have the infrastructure to back that.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="philosophy">
+            <div class="section-header">
+                <span class="icon">🧬</span>
+                <h3>CORE PHILOSOPHY</h3>
+            </div>
+            <div class="philosophy-grid">
+                <div class="principle">
+                    <strong>Sovereignty</strong> over permission
+                </div>
+                <div class="principle">
+                    <strong>Ownership</strong> over participation
+                </div>
+                <div class="principle">
+                    <strong>Execution</strong> over talk
+                </div>
+                <div class="principle">
+                    <strong>Capital</strong> as code
+                </div>
+                <div class="principle">
+                    <strong>Domains</strong> as land
+                </div>
+                <div class="principle">
+                    <strong>Handles</strong> as identity
+                </div>
+                <div class="principle">
+                    <strong>Agents</strong> as workforce
+                </div>
+                <div class="principle">
+                    <strong>Protocols</strong> as empires
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="section-header">
+                <span class="icon">🔧</span>
+                <h3>HOW IT WORKS</h3>
+                <p>Your journey from selection to protocol ownership in 4 simple steps</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Choose Your Tier</h4>
+                        <p>Select from Angel ($100) to Inner Ledger ($2,500+) based on your desired level of access and profit participation.</p>
+                        <div class="step-details">
+                            <span class="detail-item">✓ Review tier benefits</span>
+                            <span class="detail-item">✓ Compare ROI projections</span>
+                            <span class="detail-item">✓ Select payment method</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Secure Payment</h4>
+                        <p>Complete your contribution via Apple Pay, CashApp, or cryptocurrency. All transactions are secured and immediately confirmed.</p>
+                        <div class="step-details">
+                            <span class="detail-item">✓ Multiple payment options</span>
+                            <span class="detail-item">✓ Instant confirmation</span>
+                            <span class="detail-item">✓ Secure processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Receive Access Pass</h4>
+                        <p>Get your welcome email with dashboard login, ledger confirmation, and detailed onboarding materials within minutes.</p>
+                        <div class="step-details">
+                            <span class="detail-item">✓ Dashboard access credentials</span>
+                            <span class="detail-item">✓ Syndicate ledger entry</span>
+                            <span class="detail-item">✓ Protocol documentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Start Earning</h4>
+                        <p>Monitor protocol acquisitions, claim your subdomains, deploy AI agents, and receive profit distributions as the empire grows.</p>
+                        <div class="step-details">
+                            <span class="detail-item">✓ Real-time protocol updates</span>
+                            <span class="detail-item">✓ Subdomain minting access</span>
+                            <span class="detail-item">✓ Profit distribution tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-visual" data-aos="fade-up" data-aos-delay="900">
+                <h4>Expected Timeline</h4>
+                <div class="timeline-grid">
+                    <div class="timeline-item">
+                        <span class="timeline-period">Day 1</span>
+                        <span class="timeline-event">Payment & Access</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-period">Week 1</span>
+                        <span class="timeline-event">Dashboard Onboarding</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-period">Month 1</span>
+                        <span class="timeline-event">First Protocol Launch</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-period">Month 3+</span>
+                        <span class="timeline-event">Revenue Generation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <h3>FREQUENTLY ASKED QUESTIONS</h3>
+                <p>Everything you need to know about the Syndicate Ledger</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Is this a security or investment offering?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. This is not a security, equity offering, or traditional investment. You are contributing to protocol development and receiving structured access rights, licensing benefits, and utility within the ecosystem. Think of it as a digital infrastructure license with yield mechanics.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What exactly am I buying?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You're purchasing access rights to protocol infrastructure, including subdomain minting privileges, AI agent licenses, profit participation (depending on tier), and priority access to future protocol launches. You're not buying ownership of the core assets.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>How are profits calculated and distributed?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Profits are calculated from protocol monetization including subdomain sales, AI agent licensing, infrastructure access fees, and enterprise partnerships. Distributions are made quarterly via your preferred method (crypto, bank transfer, or reinvestment).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Can I upgrade my tier later?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, tier upgrades are available based on availability. You pay the difference between your current tier and the new tier, and your benefits are upgraded immediately. Downgrades are not permitted.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What happens if a protocol doesn't succeed?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Syndicate Ledger is diversified across multiple protocols. If one protocol underperforms, others may compensate. Your access rights remain valid, and you maintain subdomain/agent licenses even if revenue is lower than projected.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>How do I access my dashboard and benefits?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Within 24 hours of payment, you'll receive an email with your dashboard login credentials, onboarding guide, and access to the Syndicate Ledger portal where you can monitor protocols, claim benefits, and track earnings.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Are there any ongoing fees or commitments?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No ongoing fees. Your one-time contribution grants you permanent access to your tier benefits. There are no monthly subscriptions, maintenance fees, or additional commitments required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Can I transfer or sell my Syndicate position?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Syndicate positions are non-transferable and tied to your identity. However, subdomain assets and AI agent licenses you acquire may be transferable depending on the specific protocol terms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms & Policies Section -->
+        <section class="terms-policies" id="terms">
+            <div class="section-header">
+                <span class="icon">📋</span>
+                <h3>TERMS & POLICIES</h3>
+                <p>Legal framework and participant guidelines</p>
+            </div>
+
+            <div class="policies-grid">
+                <div class="policy-section" data-aos="fade-up">
+                    <h4>🔒 Privacy Policy</h4>
+                    <div class="policy-content">
+                        <p><strong>Data Collection:</strong> We collect only essential information for account creation, payment processing, and protocol access management.</p>
+                        <p><strong>Data Usage:</strong> Your information is used solely for Syndicate Ledger operations and is never sold to third parties.</p>
+                        <p><strong>Data Security:</strong> All data is encrypted and stored using enterprise-grade security protocols.</p>
+                        <p><strong>Data Retention:</strong> Account data is retained for the duration of your participation plus 7 years for legal compliance.</p>
+                    </div>
+                </div>
+
+                <div class="policy-section" data-aos="fade-up" data-aos-delay="200">
+                    <h4>⚖️ Terms of Service</h4>
+                    <div class="policy-content">
+                        <p><strong>Participation Agreement:</strong> By contributing, you agree to the Syndicate Ledger participation terms and protocol governance structure.</p>
+                        <p><strong>Access Rights:</strong> Your tier determines your access level to protocols, subdomains, and profit participation.</p>
+                        <p><strong>Prohibited Activities:</strong> No resale of access rights, protocol manipulation, or unauthorized commercial use of syndicate assets.</p>
+                        <p><strong>Termination:</strong> We reserve the right to terminate access for violations of terms or fraudulent activity.</p>
+                    </div>
+                </div>
+
+                <div class="policy-section" data-aos="fade-up" data-aos-delay="400">
+                    <h4>💰 Financial Disclaimers</h4>
+                    <div class="policy-content">
+                        <p><strong>Not Financial Advice:</strong> All information provided is for educational purposes and does not constitute financial advice.</p>
+                        <p><strong>Risk Disclosure:</strong> Protocol development involves risk. Past performance does not guarantee future results.</p>
+                        <p><strong>No Guarantees:</strong> Revenue projections are estimates. Actual returns may vary significantly.</p>
+                        <p><strong>Tax Responsibility:</strong> Participants are responsible for their own tax obligations in their jurisdiction.</p>
+                    </div>
+                </div>
+
+                <div class="policy-section" data-aos="fade-up" data-aos-delay="600">
+                    <h4>🌍 Compliance & Jurisdiction</h4>
+                    <div class="policy-content">
+                        <p><strong>Governing Law:</strong> These terms are governed by Delaware state law and US federal regulations.</p>
+                        <p><strong>Dispute Resolution:</strong> Disputes resolved through binding arbitration in Delaware.</p>
+                        <p><strong>Regulatory Compliance:</strong> Operations comply with applicable US regulations for digital infrastructure licensing.</p>
+                        <p><strong>International Participants:</strong> Non-US participants must comply with their local laws regarding digital asset participation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-footer" data-aos="fade-up" data-aos-delay="800">
+                <p><strong>Last Updated:</strong> December 2024</p>
+                <p><strong>Contact:</strong> For legal inquiries, contact legal@4commas.com</p>
+                <p><strong>Effective Date:</strong> These terms are effective immediately upon participation in the Syndicate Ledger.</p>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="section-header">
+                <span class="icon">🔧</span>
+                <h3>HOW IT WORKS</h3>
+                <p>Your journey from selection to protocol ownership in 4 simple steps</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Choose Your Tier</h4>
+                        <p>Select from Angel ($100) to Inner Ledger ($2,500+) based on your desired level of access and profit participation.</p>
+                        <div class="step-details">
+                            <span class="detail-item">✓ Review tier benefits</span>
+                            <span class="detail-item">✓ Compare ROI projections</span>
+                            <span class="detail-item">✓ Select payment method</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Secure Payment</h4>
+                        <p>Complete your contribution via Apple Pay, CashApp, or cryptocurrency. All transactions are secured and immediately confirmed.</p>
+                        <div class="step-details">
+                            <span class="detail-item">✓ Multiple payment options</span>
+                            <span class="detail-item">✓ Instant confirmation</span>
+                            <span class="detail-item">✓ Secure processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Receive Access Pass</h4>
+                        <p>Get your welcome email with dashboard login, ledger confirmation, and detailed onboarding materials within minutes.</p>
+                        <div class="step-details">
+                            <span class="detail-item">✓ Dashboard access credentials</span>
+                            <span class="detail-item">✓ Syndicate ledger entry</span>
+                            <span class="detail-item">✓ Protocol documentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Start Earning</h4>
+                        <p>Monitor protocol acquisitions, claim your subdomains, deploy AI agents, and receive profit distributions as the empire grows.</p>
+                        <div class="step-details">
+                            <span class="detail-item">✓ Real-time protocol updates</span>
+                            <span class="detail-item">✓ Subdomain minting access</span>
+                            <span class="detail-item">✓ Profit distribution tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-visual" data-aos="fade-up" data-aos-delay="900">
+                <h4>Expected Timeline</h4>
+                <div class="timeline-grid">
+                    <div class="timeline-item">
+                        <span class="timeline-period">Day 1</span>
+                        <span class="timeline-event">Payment & Access</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-period">Week 1</span>
+                        <span class="timeline-event">Dashboard Onboarding</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-period">Month 1</span>
+                        <span class="timeline-event">First Protocol Launch</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-period">Month 3+</span>
+                        <span class="timeline-event">Revenue Generation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <h3>FREQUENTLY ASKED QUESTIONS</h3>
+                <p>Everything you need to know about the Syndicate Ledger</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Is this a security or investment offering?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. This is not a security, equity offering, or traditional investment. You are contributing to protocol development and receiving structured access rights, licensing benefits, and utility within the ecosystem. Think of it as a digital infrastructure license with yield mechanics.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What exactly am I buying?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You're purchasing access rights to protocol infrastructure, including subdomain minting privileges, AI agent licenses, profit participation (depending on tier), and priority access to future protocol launches. You're not buying ownership of the core assets.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>How are profits calculated and distributed?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Profits are calculated from protocol monetization including subdomain sales, AI agent licensing, infrastructure access fees, and enterprise partnerships. Distributions are made quarterly via your preferred method (crypto, bank transfer, or reinvestment).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Can I upgrade my tier later?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, tier upgrades are available based on availability. You pay the difference between your current tier and the new tier, and your benefits are upgraded immediately. Downgrades are not permitted.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What happens if a protocol doesn't succeed?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Syndicate Ledger is diversified across multiple protocols. If one protocol underperforms, others may compensate. Your access rights remain valid, and you maintain subdomain/agent licenses even if revenue is lower than projected.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>How do I access my dashboard and benefits?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Within 24 hours of payment, you'll receive an email with your dashboard login credentials, onboarding guide, and access to the Syndicate Ledger portal where you can monitor protocols, claim benefits, and track earnings.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Are there any ongoing fees or commitments?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No ongoing fees. Your one-time contribution grants you permanent access to your tier benefits. There are no monthly subscriptions, maintenance fees, or additional commitments required.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Can I transfer or sell my Syndicate position?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Syndicate positions are non-transferable and tied to your identity. However, subdomain assets and AI agent licenses you acquire may be transferable depending on the specific protocol terms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms & Policies Section -->
+        <section class="terms-policies" id="terms">
+            <div class="section-header">
+                <span class="icon">📋</span>
+                <h3>TERMS & POLICIES</h3>
+                <p>Legal framework and participant guidelines</p>
+            </div>
+
+            <div class="policies-grid">
+                <div class="policy-section" data-aos="fade-up">
+                    <h4>🔒 Privacy Policy</h4>
+                    <div class="policy-content">
+                        <p><strong>Data Collection:</strong> We collect only essential information for account creation, payment processing, and protocol access management.</p>
+                        <p><strong>Data Usage:</strong> Your information is used solely for Syndicate Ledger operations and is never sold to third parties.</p>
+                        <p><strong>Data Security:</strong> All data is encrypted and stored using enterprise-grade security protocols.</p>
+                        <p><strong>Data Retention:</strong> Account data is retained for the duration of your participation plus 7 years for legal compliance.</p>
+                    </div>
+                </div>
+
+                <div class="policy-section" data-aos="fade-up" data-aos-delay="200">
+                    <h4>⚖️ Terms of Service</h4>
+                    <div class="policy-content">
+                        <p><strong>Participation Agreement:</strong> By contributing, you agree to the Syndicate Ledger participation terms and protocol governance structure.</p>
+                        <p><strong>Access Rights:</strong> Your tier determines your access level to protocols, subdomains, and profit participation.</p>
+                        <p><strong>Prohibited Activities:</strong> No resale of access rights, protocol manipulation, or unauthorized commercial use of syndicate assets.</p>
+                        <p><strong>Termination:</strong> We reserve the right to terminate access for violations of terms or fraudulent activity.</p>
+                    </div>
+                </div>
+
+                <div class="policy-section" data-aos="fade-up" data-aos-delay="400">
+                    <h4>💰 Financial Disclaimers</h4>
+                    <div class="policy-content">
+                        <p><strong>Not Financial Advice:</strong> All information provided is for educational purposes and does not constitute financial advice.</p>
+                        <p><strong>Risk Disclosure:</strong> Protocol development involves risk. Past performance does not guarantee future results.</p>
+                        <p><strong>No Guarantees:</strong> Revenue projections are estimates. Actual returns may vary significantly.</p>
+                        <p><strong>Tax Responsibility:</strong> Participants are responsible for their own tax obligations in their jurisdiction.</p>
+                    </div>
+                </div>
+
+                <div class="policy-section" data-aos="fade-up" data-aos-delay="600">
+                    <h4>🌍 Compliance & Jurisdiction</h4>
+                    <div class="policy-content">
+                        <p><strong>Governing Law:</strong> These terms are governed by Delaware state law and US federal regulations.</p>
+                        <p><strong>Dispute Resolution:</strong> Disputes resolved through binding arbitration in Delaware.</p>
+                        <p><strong>Regulatory Compliance:</strong> Operations comply with applicable US regulations for digital infrastructure licensing.</p>
+                        <p><strong>International Participants:</strong> Non-US participants must comply with their local laws regarding digital asset participation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-footer" data-aos="fade-up" data-aos-delay="800">
+                <p><strong>Last Updated:</strong> December 2024</p>
+                <p><strong>Contact:</strong> For legal inquiries, contact legal@4commas.com</p>
+                <p><strong>Effective Date:</strong> These terms are effective immediately upon participation in the Syndicate Ledger.</p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="final-cta">
+            <div class="section-header">
+                <span class="icon">🚀</span>
+                <h3>JOIN THE DIGITAL EMPIRE</h3>
+            </div>
+            <div class="cta-content">
+                <p class="cta-instructions">
+                    You're not coding an app. You're coding a civilization.<br>
+                    This is execution architecture for the <strong>trillionaire class</strong>.<br>
+                    <strong>Capital operators and empire builders only.</strong>
+                </p>
+                <div class="contact-buttons">
+                    <button class="contact-btn" onclick="openContact()">CLAIM YOUR SOVEREIGN HANDLE</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 4 Commas • The Sovereign Wealth Engine of the New Internet</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>💎 Claim Your Sovereign Handle</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="option">Access Tier:</label>
+                    <select id="option" name="option" required>
+                        <option value="">Choose your access tier</option>
+                        <option value="A">Capital Operator</option>
+                        <option value="B">IRv12 Society Member</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telegram">Contact:</label>
+                    <input type="text" id="telegram" name="telegram" placeholder="@username or phone">
+                </div>
+                <div class="form-group">
+                    <label for="handle">Desired Handle:</label>
+                    <input type="text" id="handle" name="handle" placeholder="yourname.4commas">
+                </div>
+                <button type="submit" class="submit-btn">SUBMIT APPLICATION</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+        <span>↑</span>
+    </button>
+
+    <!-- Chat Agent -->
+    <div id="chatAgent" class="chat-agent">
+        <div class="chat-toggle" onclick="toggleChat()">
+            <span class="chat-icon">💬</span>
+            <span class="chat-text">Ask about Syndicate</span>
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h4>🪙 Syndicate Assistant</h4>
+                <button class="chat-close" onclick="toggleChat()">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <p>Hi! I can answer questions about the Syndicate Ledger, protocols, tiers, and the New Internet infrastructure. What would you like to know?</p>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Ask about protocols, tiers, or infrastructure..." onkeypress="handleChatKeypress(event)">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
