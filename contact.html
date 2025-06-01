@@ -6,6 +6,17 @@
     <title>Contact & Access - 4 Commas Syndicate</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- 21st.dev Components -->
+    <script src="https://unpkg.com/@21st-dev/components@latest/dist/21st-components.js"></script>
+    <style>
+        /* 21st.dev Purple Theme Override */
+        :root {
+            --primary-color: #A855F7;
+            --primary-hover: #9333EA;
+            --primary-light: rgba(168, 85, 247, 0.1);
+            --primary-border: rgba(168, 85, 247, 0.3);
+        }
+    </style>
 </head>
 <body class="contact-page">
     <div class="contact-container">
@@ -153,19 +164,19 @@
                         <span class="action-icon">📞</span>
                         <span class="action-text">Call Now</span>
                     </a>
-                    <a href="sms:+13133529003" class="action-btn">
+                    <a href="sms:+13133529003" class="action-btn glow-effect">
                         <span class="action-icon">💬</span>
                         <span class="action-text">Send SMS</span>
                     </a>
-                    <a href="https://x.com/aimademerich" target="_blank" class="action-btn">
+                    <a href="https://x.com/aimademerich" target="_blank" class="action-btn glow-effect">
                         <span class="action-icon">𝕏</span>
                         <span class="action-text">Follow on X</span>
                     </a>
-                    <a href="index.html#tiers" class="action-btn">
+                    <a href="index.html#tiers" class="action-btn glow-effect">
                         <span class="action-icon">🎯</span>
                         <span class="action-text">View Tiers</span>
                     </a>
-                    <a href="login.html" class="action-btn">
+                    <a href="login.html" class="action-btn glow-effect">
                         <span class="action-icon">🔐</span>
                         <span class="action-text">Member Login</span>
                     </a>
@@ -180,7 +191,6 @@
 
         <!-- Background Effects -->
         <div class="contact-bg">
-            <div class="bg-grid"></div>
             <div class="bg-glow"></div>
         </div>
     </div>
@@ -188,6 +198,8 @@
     <script>
         // Check landing access and agreement before loading page
         window.addEventListener('load', () => {
+            // Temporarily commented out for testing
+            /*
             const hasLandingAccess = localStorage.getItem('landing_access');
             const hasAgreed = localStorage.getItem('syndicate_agreement');
 
@@ -200,6 +212,7 @@
                 window.location.href = 'agreement.html';
                 return;
             }
+            */
         });
     </script>
 </body>
