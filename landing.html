@@ -143,8 +143,20 @@
                 <div class="cta-footer">
                     <p>No hype. No ads. No affiliate links.</p>
                     <p>Just raw access to the future — while it's still claimable.</p>
+
+                    <!-- Newsletter Signup -->
+                    <div class="newsletter-section">
+                        <h4>📧 Stay Updated</h4>
+                        <p>Get notified of new protocol drops and exclusive opportunities</p>
+                        <div class="newsletter-form">
+                            <input type="email" id="newsletterEmail" placeholder="Enter your email" class="newsletter-input">
+                            <button class="newsletter-btn" onclick="subscribeNewsletter()">Subscribe</button>
+                        </div>
+                    </div>
+
                     <div class="contact-info">
                         <p>Don't have an access code? <a href="tel:+13133529003">📱 +1 (313) 352-9003</a></p>
+                        <p>Follow updates: <a href="https://x.com/aimademerich" target="_blank">🐦 @aimademerich</a></p>
                     </div>
                 </div>
             </section>
@@ -255,6 +267,34 @@
 
         // Start countdown
         startCountdown();
+
+        // Newsletter subscription
+        function subscribeNewsletter() {
+            const email = document.getElementById('newsletterEmail').value;
+            const button = document.querySelector('.newsletter-btn');
+
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Show loading state
+            button.innerHTML = 'Subscribing...';
+            button.disabled = true;
+
+            // Simulate subscription (replace with actual API call)
+            setTimeout(() => {
+                button.innerHTML = '✅ Subscribed';
+                button.style.background = 'linear-gradient(135deg, #059669 0%, #10b981 100%)';
+                document.getElementById('newsletterEmail').value = '';
+
+                setTimeout(() => {
+                    button.innerHTML = 'Subscribe';
+                    button.style.background = 'linear-gradient(135deg, #9333EA 0%, #A855F7 100%)';
+                    button.disabled = false;
+                }, 3000);
+            }, 1000);
+        }
 
         // Add some interactive effects
         document.addEventListener('DOMContentLoaded', function() {

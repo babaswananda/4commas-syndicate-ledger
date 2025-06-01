@@ -25,9 +25,36 @@ h1, h2, h3, h4, h5, h6,
 .agreement-title,
 .tier-name,
 .demo-title,
-.step-title {
+.step-title,
+.landing-title,
+.fugio-header h3,
+.fugio-tagline,
+.newsletter-section h4 {
     position: relative;
-    z-index: 1;
+    z-index: 100 !important;
+    isolation: isolate;
+}
+
+/* Force emoji visibility */
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 *,
+.section-title *,
+.hero-title *,
+.cta-title *,
+.agreement-title *,
+.tier-name *,
+.demo-title *,
+.step-title *,
+.landing-title *,
+.fugio-header h3 *,
+.fugio-tagline *,
+.newsletter-section h4 * {
+    position: relative;
+    z-index: 101 !important;
 }
 
 /* Ensure all interactive elements are above emojis */
@@ -63,6 +90,29 @@ select,
 .landing-bg,
 .contact-bg {
     z-index: 1 !important;
+}
+
+/* Additional emoji fixes for specific elements */
+.protocol-showcase h4,
+.showcase-header h4,
+.tld-section h2,
+.tld-title,
+.vanity-section h2,
+.fugio-section h3,
+.fugio-section h4,
+.layers-table .layer-col,
+.comparison-header .header-item,
+.stack-header .stack-col {
+    position: relative;
+    z-index: 100 !important;
+    isolation: isolate;
+}
+
+/* Force all text content to be visible */
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Futuristic grid overlay */
@@ -3618,6 +3668,82 @@ blockquote {
 
 .contact-info a:hover {
     color: #ffffff;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    margin: 24px 0;
+    padding: 24px;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.newsletter-section h4 {
+    font-size: 18px;
+    color: #A855F7;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 100 !important;
+}
+
+.newsletter-section p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 16px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: #A855F7;
+    box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.newsletter-btn {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #9333EA 0%, #A855F7 100%);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+}
+
+.newsletter-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
 }
 
 /* Protocol Marquee for Landing */
