@@ -6857,45 +6857,4 @@ blockquote {
     animation: fadeIn 0.6s ease forwards;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .access-tiers {
-        grid-template-columns: 1fr;
-    }
-
-    .divisions-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .empire-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .philosophy-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-
-    .modal-content {
-        margin: 10% auto;
-        padding: 30px 20px;
-    }
-
-    .success-content {
-        margin: 20px;
-        padding: 30px 20px;
-    }
-}
+/* Additional Mobile Responsive Rules (merged into main mobile section above) */
