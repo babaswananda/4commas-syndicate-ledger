@@ -52,10 +52,9 @@ h1, h2, h3, h4, h5, h6,
 .quick-actions h2,
 .footer h3 {
     position: relative !important;
-    z-index: 1000 !important;
+    z-index: 10 !important;
     isolation: isolate !important;
-    transform: translateZ(0) !important;
-    will-change: transform !important;
+    pointer-events: auto !important;
 }
 
 /* Force ALL text content including emojis to be visible */
@@ -98,13 +97,14 @@ h6 *,
 .quick-actions h2 *,
 .footer h3 * {
     position: relative !important;
-    z-index: 1001 !important;
+    z-index: 11 !important;
     display: inline !important;
     visibility: visible !important;
     opacity: 1 !important;
+    pointer-events: auto !important;
 }
 
-/* Ensure all interactive elements are above emojis */
+/* Ensure all interactive elements are above emojis and clickable */
 button,
 a,
 input,
@@ -124,11 +124,25 @@ select,
 .payment-option,
 .faq-item,
 .newsletter-form,
+.newsletter-btn,
+.newsletter-input,
+.enhanced-button,
+.enhanced-input,
+.protocol-card,
+.filter-btn,
 .modal,
 .dropdown {
-    position: relative;
+    position: relative !important;
     z-index: 100 !important;
-    pointer-events: auto;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Ensure input fields are selectable */
+input,
+textarea,
+select {
+    cursor: text !important;
 }
 
 /* Background elements stay behind */
@@ -162,49 +176,14 @@ select,
     -moz-osx-font-smoothing: grayscale !important;
 }
 
-/* ULTIMATE EMOJI VISIBILITY FIX */
-*:contains("🌐"),
-*:contains("🔍"),
-*:contains("⚔️"),
-*:contains("🚀"),
-*:contains("💅"),
-*:contains("🔑"),
-*:contains("🧠"),
-*:contains("🪙"),
-*:contains("🧬"),
-*:contains("🔗"),
-*:contains("🤖"),
-*:contains("📧"),
-*:contains("⏰"),
-*:contains("🏛️"),
-*:contains("🐦"),
-*:contains("𝕏"),
-*:contains("📱"),
-*:contains("💬"),
-*:contains("🍎"),
-*:contains("💰"),
-*:contains("⚡"),
-*:contains("🎯"),
-*:contains("🔐") {
-    position: relative !important;
-    z-index: 9999 !important;
-    isolation: isolate !important;
-    transform: translateZ(0) !important;
-    will-change: transform !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
 /* FORCE ALL HEADERS TO SHOW EMOJIS */
 [class*="title"],
 [class*="header"],
 [class*="heading"] {
     position: relative !important;
-    z-index: 9999 !important;
+    z-index: 10 !important;
     isolation: isolate !important;
-    transform: translateZ(0) !important;
-    will-change: transform !important;
+    pointer-events: auto !important;
 }
 
 /* FORCE ALL HEADER TEXT INCLUDING EMOJIS */
@@ -212,10 +191,11 @@ select,
 [class*="header"] *,
 [class*="heading"] * {
     position: relative !important;
-    z-index: 10000 !important;
+    z-index: 11 !important;
     display: inline !important;
     visibility: visible !important;
     opacity: 1 !important;
+    pointer-events: auto !important;
 }
 
 /* Futuristic grid overlay */
