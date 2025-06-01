@@ -6,20 +6,52 @@
     <title>Protocol Portfolio - This Is Not a Startup. This Is a Stack.</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- 21st.dev Components -->
+    <script src="https://unpkg.com/@21st-dev/components@latest/dist/21st-components.js"></script>
+    <style>
+        /* 21st.dev Purple Theme Override */
+        :root {
+            --primary-color: #A855F7;
+            --primary-hover: #9333EA;
+            --primary-light: rgba(168, 85, 247, 0.1);
+            --primary-border: rgba(168, 85, 247, 0.3);
+        }
+    </style>
 </head>
 <body class="landing-page">
     <div class="landing-container">
         <!-- Header -->
-        <header class="landing-header">
-            <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="landing-logo">
-            <div class="landing-tagline">
-                <h1 class="landing-title">"This Is Not a Startup. This Is a Stack."</h1>
-                <p class="landing-subtitle">For: Investors • Operators • Syndicate Access Only</p>
-            </div>
-            <div class="header-cta">
-                <div class="countdown-timer">
-                    <span class="countdown-label">OFFER EXPIRES IN</span>
-                    <div class="countdown-time" id="landingCountdown">24:00:00</div>
+        <header class="landing-header modern-header">
+            <div class="header-content">
+                <div class="header-brand">
+                    <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="landing-logo">
+                    <div class="brand-badge">
+                        <span class="badge-text">PRIVATE REGISTRY</span>
+                        <div class="badge-glow"></div>
+                    </div>
+                </div>
+
+                <div class="header-main">
+                    <div class="title-container">
+                        <h1 class="landing-title gradient-text">"This Is Not a Startup. This Is a Stack."</h1>
+                        <div class="subtitle-badges">
+                            <span class="audience-badge">Investors</span>
+                            <span class="audience-badge">Operators</span>
+                            <span class="audience-badge exclusive">Syndicate Access Only</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-cta">
+                    <div class="countdown-card">
+                        <div class="countdown-header">
+                            <span class="countdown-label">⏰ OFFER EXPIRES IN</span>
+                        </div>
+                        <div class="countdown-display">
+                            <div class="countdown-time" id="landingCountdown">24:00:00</div>
+                            <div class="countdown-pulse"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -134,9 +166,13 @@
                 <h3 class="cta-title">🚪 This Is Your Gate. Walk Through It.</h3>
 
                 <div class="access-form">
-                    <input type="password" id="accessCode" placeholder="Enter your access code" class="access-input">
-                    <button class="cta-button" onclick="enterStack()">
-                        SIGN IN TO VIEW THE STACK
+                    <div class="input-group">
+                        <input type="password" id="accessCode" placeholder="Enter your access code" class="access-input enhanced-input">
+                        <div class="input-icon">🔐</div>
+                    </div>
+                    <button class="cta-button enhanced-button" onclick="enterStack()">
+                        <span class="button-text">SIGN IN TO VIEW THE STACK</span>
+                        <div class="button-glow"></div>
                     </button>
                 </div>
 
@@ -156,7 +192,7 @@
 
                     <div class="contact-info">
                         <p>Don't have an access code? <a href="tel:+13133529003">📱 +1 (313) 352-9003</a></p>
-                        <p>Follow updates: <a href="https://x.com/aimademerich" target="_blank">🐦 @aimademerich</a></p>
+                        <p>Follow updates: <a href="https://x.com/aimademerich" target="_blank">𝕏 @aimademerich</a></p>
                     </div>
                 </div>
             </section>
@@ -175,14 +211,42 @@
     </div>
 
     <script>
-        // Access codes
-        const ACCESS_CODES = [
-            'SYNDICATE2024',
-            'PROTOCOL',
-            'NEWINTERNET',
-            'INFRASTRUCTURE',
-            '4COMMAS'
-        ];
+        // Access codes with cookie tracking
+        const ACCESS_CODES = {
+            'SYNDICATE2024': 'syndicate_2024',
+            'PROTOCOL': 'protocol_access',
+            'NEWINTERNET': 'new_internet',
+            'INFRASTRUCTURE': 'infra_access',
+            '4COMMAS': 'four_commas',
+            'INVESTOR': 'investor_tier',
+            'OPERATOR': 'operator_tier',
+            'BUILDER': 'builder_tier',
+            'WHALE': 'whale_tier',
+            'DIAMOND': 'diamond_tier'
+        };
+
+        // Cookie utilities
+        function setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function isCodeUsed(code) {
+            const cookieName = ACCESS_CODES[code];
+            return getCookie(cookieName) === 'used';
+        }
 
         function enterStack() {
             const code = document.getElementById('accessCode').value.toUpperCase();
@@ -193,14 +257,32 @@
                 return;
             }
 
+            // Check if code is already used
+            if (isCodeUsed(code)) {
+                button.innerHTML = '❌ CODE ALREADY USED';
+                button.style.background = 'linear-gradient(135deg, #dc2626 0%, #ef4444 100%)';
+                document.getElementById('accessCode').value = '';
+
+                setTimeout(() => {
+                    button.innerHTML = 'SIGN IN TO VIEW THE STACK';
+                    button.style.background = 'linear-gradient(135deg, #9333EA 0%, #A855F7 100%)';
+                    button.disabled = false;
+                }, 3000);
+                return;
+            }
+
             // Show loading state
             button.innerHTML = 'VERIFYING ACCESS...';
             button.disabled = true;
 
             setTimeout(() => {
-                if (ACCESS_CODES.includes(code)) {
+                if (ACCESS_CODES.hasOwnProperty(code)) {
+                    // Mark code as used
+                    setCookie(ACCESS_CODES[code], 'used', 365);
+
                     // Grant access and redirect to agreement
                     localStorage.setItem('landing_access', 'granted');
+                    localStorage.setItem('access_code_used', code);
                     button.innerHTML = '✅ ACCESS GRANTED';
                     button.style.background = 'linear-gradient(135deg, #059669 0%, #10b981 100%)';
 
@@ -225,8 +307,10 @@
         // URL parameter access (for direct links with code)
         const urlParams = new URLSearchParams(window.location.search);
         const urlCode = urlParams.get('code');
-        if (urlCode && ACCESS_CODES.includes(urlCode.toUpperCase())) {
+        if (urlCode && ACCESS_CODES.hasOwnProperty(urlCode.toUpperCase()) && !isCodeUsed(urlCode.toUpperCase())) {
+            setCookie(ACCESS_CODES[urlCode.toUpperCase()], 'used', 365);
             localStorage.setItem('landing_access', 'granted');
+            localStorage.setItem('access_code_used', urlCode.toUpperCase());
             window.location.href = 'agreement.html';
         }
 
