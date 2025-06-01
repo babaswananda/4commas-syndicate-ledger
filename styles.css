@@ -3059,9 +3059,11 @@ blockquote {
 }
 
 .agreement-header .logo-image {
-    width: 80px;
-    height: 40px;
+    width: 220px;
+    height: 80px;
     margin-bottom: 16px;
+    border-radius: 8px;
+    object-fit: contain;
 }
 
 .agreement-title {
