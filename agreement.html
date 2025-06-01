@@ -278,7 +278,7 @@
                 acceptBtn.style.background = 'linear-gradient(135deg, #059669 0%, #10b981 100%)';
                 
                 setTimeout(() => {
-                    window.location.href = 'access-gate.html';
+                    window.location.href = 'index.html';
                 }, 1500);
             }
         }
@@ -290,11 +290,20 @@
             }
         }
 
-        // Check if already accepted
+        // Check access and agreement status
         window.addEventListener('load', () => {
+            const hasLandingAccess = localStorage.getItem('landing_access');
             const hasAccepted = localStorage.getItem('syndicate_agreement');
+
+            // Must have landing access to view agreement
+            if (hasLandingAccess !== 'granted') {
+                window.location.href = 'landing.html';
+                return;
+            }
+
+            // If already accepted agreement, go to main site
             if (hasAccepted === 'accepted') {
-                window.location.href = 'access-gate.html';
+                window.location.href = 'index.html';
             }
         });
     </script>

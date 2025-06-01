@@ -1866,18 +1866,18 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Check agreement and access before loading page
+        // Check landing access and agreement before loading page
         window.addEventListener('load', () => {
+            const hasLandingAccess = localStorage.getItem('landing_access');
             const hasAgreed = localStorage.getItem('syndicate_agreement');
-            const hasAccess = localStorage.getItem('syndicate_access');
 
-            if (hasAgreed !== 'accepted') {
-                window.location.href = 'agreement.html';
+            if (hasLandingAccess !== 'granted') {
+                window.location.href = 'landing.html';
                 return;
             }
 
-            if (hasAccess !== 'granted') {
-                window.location.href = 'access-gate.html';
+            if (hasAgreed !== 'accepted') {
+                window.location.href = 'agreement.html';
                 return;
             }
         });

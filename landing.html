@@ -108,12 +108,20 @@
             <!-- CTA Section -->
             <section class="landing-cta">
                 <h3 class="cta-title">🚪 This Is Your Gate. Walk Through It.</h3>
-                <button class="cta-button" onclick="enterStack()">
-                    SIGN IN TO VIEW THE STACK
-                </button>
+
+                <div class="access-form">
+                    <input type="password" id="accessCode" placeholder="Enter your access code" class="access-input">
+                    <button class="cta-button" onclick="enterStack()">
+                        SIGN IN TO VIEW THE STACK
+                    </button>
+                </div>
+
                 <div class="cta-footer">
                     <p>No hype. No ads. No affiliate links.</p>
                     <p>Just raw access to the future — while it's still claimable.</p>
+                    <div class="contact-info">
+                        <p>Don't have an access code? <a href="tel:+13133529003">📱 +1 (313) 352-9003</a></p>
+                    </div>
                 </div>
             </section>
         </main>
@@ -131,10 +139,69 @@
     </div>
 
     <script>
+        // Access codes
+        const ACCESS_CODES = [
+            'SYNDICATE2024',
+            'PROTOCOL',
+            'NEWINTERNET',
+            'INFRASTRUCTURE',
+            '4COMMAS'
+        ];
+
         function enterStack() {
-            // Redirect to agreement page
+            const code = document.getElementById('accessCode').value.toUpperCase();
+            const button = document.querySelector('.cta-button');
+
+            if (!code) {
+                alert('Please enter your access code.');
+                return;
+            }
+
+            // Show loading state
+            button.innerHTML = 'VERIFYING ACCESS...';
+            button.disabled = true;
+
+            setTimeout(() => {
+                if (ACCESS_CODES.includes(code)) {
+                    // Grant access and redirect to agreement
+                    localStorage.setItem('landing_access', 'granted');
+                    button.innerHTML = '✅ ACCESS GRANTED';
+                    button.style.background = 'linear-gradient(135deg, #059669 0%, #10b981 100%)';
+
+                    setTimeout(() => {
+                        window.location.href = 'agreement.html';
+                    }, 1000);
+                } else {
+                    // Deny access
+                    button.innerHTML = '❌ INVALID CODE';
+                    button.style.background = 'linear-gradient(135deg, #dc2626 0%, #ef4444 100%)';
+                    document.getElementById('accessCode').value = '';
+
+                    setTimeout(() => {
+                        button.innerHTML = 'SIGN IN TO VIEW THE STACK';
+                        button.style.background = 'linear-gradient(135deg, #9333EA 0%, #A855F7 100%)';
+                        button.disabled = false;
+                    }, 2000);
+                }
+            }, 1500);
+        }
+
+        // URL parameter access (for direct links with code)
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlCode = urlParams.get('code');
+        if (urlCode && ACCESS_CODES.includes(urlCode.toUpperCase())) {
+            localStorage.setItem('landing_access', 'granted');
             window.location.href = 'agreement.html';
         }
+
+        // Enter key support
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('accessCode').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    enterStack();
+                }
+            });
+        });
 
         // Add some interactive effects
         document.addEventListener('DOMContentLoaded', function() {
