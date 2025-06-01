@@ -17,7 +17,7 @@ body {
     letter-spacing: -0.01em;
 }
 
-/* GLOBAL EMOJI Z-INDEX FIX */
+/* COMPREHENSIVE EMOJI Z-INDEX FIX FOR ALL HEADERS */
 h1, h2, h3, h4, h5, h6,
 .section-title,
 .hero-title,
@@ -29,13 +29,36 @@ h1, h2, h3, h4, h5, h6,
 .landing-title,
 .fugio-header h3,
 .fugio-tagline,
-.newsletter-section h4 {
-    position: relative;
-    z-index: 100 !important;
-    isolation: isolate;
+.newsletter-section h4,
+.tld-title,
+.gradient-title,
+.enhanced-subtitle,
+.protocol-showcase h4,
+.showcase-header h4,
+.comparison-header .header-item,
+.stack-header .stack-col,
+.vanity-section h2,
+.fugio-section h3,
+.fugio-section h4,
+.layers-table .layer-col,
+.protocol-category h4,
+.category-title,
+.final-positioning h3,
+.demo-conclusion h3,
+.roi-section h3,
+.licensing-section h3,
+.contact-section h2,
+.payment-methods h2,
+.quick-actions h2,
+.footer h3 {
+    position: relative !important;
+    z-index: 1000 !important;
+    isolation: isolate !important;
+    transform: translateZ(0) !important;
+    will-change: transform !important;
 }
 
-/* Force emoji visibility */
+/* Force ALL text content including emojis to be visible */
 h1 *,
 h2 *,
 h3 *,
@@ -52,9 +75,33 @@ h6 *,
 .landing-title *,
 .fugio-header h3 *,
 .fugio-tagline *,
-.newsletter-section h4 * {
-    position: relative;
-    z-index: 101 !important;
+.newsletter-section h4 *,
+.tld-title *,
+.gradient-title *,
+.enhanced-subtitle *,
+.protocol-showcase h4 *,
+.showcase-header h4 *,
+.comparison-header .header-item *,
+.stack-header .stack-col *,
+.vanity-section h2 *,
+.fugio-section h3 *,
+.fugio-section h4 *,
+.layers-table .layer-col *,
+.protocol-category h4 *,
+.category-title *,
+.final-positioning h3 *,
+.demo-conclusion h3 *,
+.roi-section h3 *,
+.licensing-section h3 *,
+.contact-section h2 *,
+.payment-methods h2 *,
+.quick-actions h2 *,
+.footer h3 * {
+    position: relative !important;
+    z-index: 1001 !important;
+    display: inline !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* Ensure all interactive elements are above emojis */
@@ -108,11 +155,67 @@ select,
     isolation: isolate;
 }
 
-/* Force all text content to be visible */
+/* NUCLEAR EMOJI FIX - FORCE ALL TEXT TO BE VISIBLE */
 * {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* ULTIMATE EMOJI VISIBILITY FIX */
+*:contains("🌐"),
+*:contains("🔍"),
+*:contains("⚔️"),
+*:contains("🚀"),
+*:contains("💅"),
+*:contains("🔑"),
+*:contains("🧠"),
+*:contains("🪙"),
+*:contains("🧬"),
+*:contains("🔗"),
+*:contains("🤖"),
+*:contains("📧"),
+*:contains("⏰"),
+*:contains("🏛️"),
+*:contains("🐦"),
+*:contains("𝕏"),
+*:contains("📱"),
+*:contains("💬"),
+*:contains("🍎"),
+*:contains("💰"),
+*:contains("⚡"),
+*:contains("🎯"),
+*:contains("🔐") {
+    position: relative !important;
+    z-index: 9999 !important;
+    isolation: isolate !important;
+    transform: translateZ(0) !important;
+    will-change: transform !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* FORCE ALL HEADERS TO SHOW EMOJIS */
+[class*="title"],
+[class*="header"],
+[class*="heading"] {
+    position: relative !important;
+    z-index: 9999 !important;
+    isolation: isolate !important;
+    transform: translateZ(0) !important;
+    will-change: transform !important;
+}
+
+/* FORCE ALL HEADER TEXT INCLUDING EMOJIS */
+[class*="title"] *,
+[class*="header"] *,
+[class*="heading"] * {
+    position: relative !important;
+    z-index: 10000 !important;
+    display: inline !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* Futuristic grid overlay */
