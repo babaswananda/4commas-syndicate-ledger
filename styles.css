@@ -2993,6 +2993,235 @@ blockquote {
     color: #ffffff;
 }
 
+/* Agreement Page Styles */
+.agreement-page {
+    min-height: 100vh;
+    background: #000000;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.agreement-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 10;
+}
+
+.agreement-header {
+    text-align: center;
+    padding: 60px 0 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.agreement-logo {
+    width: 120px;
+    height: 60px;
+    margin-bottom: 24px;
+}
+
+.agreement-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #A855F7 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.agreement-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.agreement-content {
+    padding: 60px 0;
+}
+
+.agreement-text {
+    margin-bottom: 60px;
+}
+
+.agreement-section {
+    margin-bottom: 48px;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.agreement-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #A855F7;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.agreement-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 24px 0 12px 0;
+}
+
+.agreement-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 16px 0 8px 0;
+}
+
+.agreement-section p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.agreement-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.agreement-section li {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.agreement-section li:before {
+    content: "▸";
+    color: #A855F7;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.agreement-section strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Agreement Actions */
+.agreement-actions {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.agreement-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.agreement-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: #A855F7;
+}
+
+.agreement-checkbox label {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.agreement-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.agreement-btn {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.agreement-btn.decline {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #EF4444;
+}
+
+.agreement-btn.decline:hover {
+    background: rgba(239, 68, 68, 0.2);
+    transform: translateY(-2px);
+}
+
+.agreement-btn.accept {
+    background: linear-gradient(135deg, #9333EA 0%, #A855F7 100%);
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.agreement-btn.accept:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
+}
+
+.agreement-footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+.agreement-footer p {
+    margin: 4px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .agreement-container {
+        padding: 0 16px;
+    }
+
+    .agreement-section {
+        padding: 24px 20px;
+    }
+
+    .agreement-title {
+        font-size: 28px;
+    }
+
+    .agreement-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .agreement-btn {
+        width: 100%;
+    }
+}
+
 /* Access Gate Styles */
 .access-gate-page {
     min-height: 100vh;
