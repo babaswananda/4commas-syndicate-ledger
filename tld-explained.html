@@ -6,6 +6,17 @@
     <title>What's a TLD? | HNS vs ICANN | IDIDD Protocol</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- 21st.dev Components -->
+    <script src="https://unpkg.com/@21st-dev/components@latest/dist/21st-components.js"></script>
+    <style>
+        /* 21st.dev Purple Theme Override */
+        :root {
+            --primary-color: #A855F7;
+            --primary-hover: #9333EA;
+            --primary-light: rgba(168, 85, 247, 0.1);
+            --primary-border: rgba(168, 85, 247, 0.3);
+        }
+    </style>
     <meta name="description" content="Understanding TLDs, HNS vs ICANN, and the IDIDD Protocol - Your gateway to the New Internet infrastructure.">
 </head>
 <body>
@@ -26,11 +37,42 @@
         <!-- Main Content -->
         <main class="tld-main">
             <!-- Hero Section -->
-            <section class="tld-hero">
-                <h1 class="tld-title">🌐 What's a TLD?</h1>
-                <p class="tld-subtitle">And Why It's the Cornerstone of the New Internet</p>
-                <div class="hero-statement">
-                    <p>You think you're buying domains. You're actually buying <strong>the roads of the internet</strong>.</p>
+            <section class="tld-hero modern-hero">
+                <div class="hero-badge-container">
+                    <div class="hero-badge">
+                        <span class="badge-icon">🌐</span>
+                        <span class="badge-text">INFRASTRUCTURE GUIDE</span>
+                        <div class="badge-shimmer"></div>
+                    </div>
+                </div>
+
+                <h1 class="tld-title gradient-title">What's a TLD?</h1>
+                <p class="tld-subtitle enhanced-subtitle">And Why It's the Cornerstone of the New Internet</p>
+
+                <div class="hero-statement modern-card">
+                    <div class="card-glow"></div>
+                    <div class="statement-content">
+                        <p class="statement-text">You think you're buying domains.</p>
+                        <p class="statement-emphasis">You're actually buying <strong>the roads of the internet</strong>.</p>
+                    </div>
+                    <div class="card-border-animation"></div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3000+</div>
+                        <div class="stat-label">TLDs Owned</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Revenue Streams</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Ownership</div>
+                    </div>
                 </div>
             </section>
 
@@ -88,36 +130,70 @@
             <!-- Old vs New Internet Comparison -->
             <section class="tld-section">
                 <h2>🧱 Old Internet vs. New Internet</h2>
-                <div class="internet-comparison-table">
-                    <div class="comparison-header">
-                        <div class="header-item">Feature</div>
-                        <div class="header-item">Old Internet (ICANN)</div>
-                        <div class="header-item">New Internet (Handshake + IDIDD)</div>
+                <div class="comparison-container modern-comparison">
+                    <div class="comparison-card old-internet-card">
+                        <div class="card-header">
+                            <div class="card-icon">🏛️</div>
+                            <h3>Old Internet (ICANN)</h3>
+                            <div class="status-badge outdated">LEGACY</div>
+                        </div>
+                        <div class="comparison-features">
+                            <div class="feature-item">
+                                <span class="feature-label">Ownership:</span>
+                                <span class="feature-value negative">Leased, centralized</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">Use Case:</span>
+                                <span class="feature-value negative">Website hosting only</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">Governance:</span>
+                                <span class="feature-value negative">ICANN-regulated</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">Interoperability:</span>
+                                <span class="feature-value negative">Limited</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">Monetization:</span>
+                                <span class="feature-value negative">Pay to renew</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="comparison-row">
-                        <div class="row-item feature">TLD Ownership</div>
-                        <div class="row-item old">Leased, centralized</div>
-                        <div class="row-item new">Owned, decentralized</div>
+
+                    <div class="vs-indicator">
+                        <div class="vs-circle">VS</div>
+                        <div class="vs-line"></div>
                     </div>
-                    <div class="comparison-row">
-                        <div class="row-item feature">Use Case</div>
-                        <div class="row-item old">Website hosting only</div>
-                        <div class="row-item new">Identity, wallet, access, agents</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="row-item feature">Governance</div>
-                        <div class="row-item old">ICANN-regulated</div>
-                        <div class="row-item new">Community-owned, uncensorable</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="row-item feature">Interoperability</div>
-                        <div class="row-item old">Limited</div>
-                        <div class="row-item new">Full integration with AI, crypto, agents</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="row-item feature">Monetization</div>
-                        <div class="row-item old">Pay to renew</div>
-                        <div class="row-item new">License, lease, tokenize, build</div>
+
+                    <div class="comparison-card new-internet-card">
+                        <div class="card-header">
+                            <div class="card-icon">🚀</div>
+                            <h3>New Internet (Handshake + IDIDD)</h3>
+                            <div class="status-badge modern">FUTURE</div>
+                        </div>
+                        <div class="comparison-features">
+                            <div class="feature-item">
+                                <span class="feature-label">Ownership:</span>
+                                <span class="feature-value positive">Owned, decentralized</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">Use Case:</span>
+                                <span class="feature-value positive">Identity, wallet, access, agents</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">Governance:</span>
+                                <span class="feature-value positive">Community-owned, uncensorable</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">Interoperability:</span>
+                                <span class="feature-value positive">Full integration with AI, crypto, agents</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">Monetization:</span>
+                                <span class="feature-value positive">License, lease, tokenize, build</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
