@@ -428,44 +428,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add countdown timer (optional - can be activated)
-function startCountdown(hours = 24) {
+// Add countdown timer to June 4, 2025
+function startCountdown() {
     const countdownElement = document.createElement('div');
     countdownElement.className = 'countdown-timer';
     countdownElement.innerHTML = `
         <div class="countdown-content">
-            <span class="countdown-label">OFFER EXPIRES IN:</span>
+            <span class="countdown-label">SYNDICATE LAUNCH:</span>
             <span class="countdown-time" id="countdown-display"></span>
         </div>
     `;
-    
+
     // Insert after header
     const header = document.querySelector('.header');
     header.insertAdjacentElement('afterend', countdownElement);
-    
-    const endTime = new Date().getTime() + (hours * 60 * 60 * 1000);
-    
+
+    // Set target date: Wednesday, June 4, 2025 at 12:00 PM EST
+    const targetDate = new Date('June 4, 2025 12:00:00 EST').getTime();
+
     const timer = setInterval(() => {
         const now = new Date().getTime();
-        const distance = endTime - now;
-        
+        const distance = targetDate - now;
+
         if (distance < 0) {
             clearInterval(timer);
-            document.getElementById('countdown-display').innerHTML = 'EXPIRED';
+            document.getElementById('countdown-display').innerHTML = 'LIVE NOW';
             return;
         }
-        
-        const hoursLeft = Math.floor(distance / (1000 * 60 * 60));
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        document.getElementById('countdown-display').innerHTML = 
-            `${hoursLeft.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        document.getElementById('countdown-display').innerHTML =
+            `${days}d ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }, 1000);
 }
 
-// Activate 30-minute countdown for the current offer
-startCountdown(0.5);
+// Activate countdown to June 4, 2025
+startCountdown();
 
 // Hero Slides Functionality
 let currentSlide = 1;
@@ -685,7 +687,7 @@ function selectTier(tierNumber) {
     const paymentInfo = `You selected: ${tierName}
 
 Payment Options:
-🍎 Apple Pay - Contact for setup
+🍎 Apple Pay - Call/text +1 (313) 352-9003
 💸 Cash App - $supplydemandshowroom
    (Visit: https://cash.app/$supplydemandshowroom)
 ₿ Crypto - USDC/ETH/BTC accepted

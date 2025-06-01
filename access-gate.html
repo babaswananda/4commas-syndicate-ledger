@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Access - 4 Commas Syndicate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="access-gate-page">
+    <div class="access-gate-container">
+        <!-- Access Gate Form -->
+        <div class="access-gate-form">
+            <div class="gate-header">
+                <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="gate-logo">
+                <h1 class="gate-title">🔐 Private Syndicate Access</h1>
+                <p class="gate-subtitle">This is an exclusive offering for select operators and infrastructure allies only.</p>
+            </div>
+
+            <form class="gate-form" id="accessForm">
+                <div class="gate-input-group">
+                    <label for="accessCode">Access Code</label>
+                    <input type="password" id="accessCode" placeholder="Enter your access code" required>
+                </div>
+                <button type="submit" class="gate-btn" id="accessBtn">
+                    ENTER SYNDICATE
+                </button>
+            </form>
+
+            <div class="gate-footer">
+                <p class="gate-note">Don't have an access code?</p>
+                <div class="gate-contact">
+                    <a href="tel:+13133529003" class="gate-contact-link">
+                        📱 Contact +1 (313) 352-9003
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Effects -->
+        <div class="gate-bg">
+            <div class="gate-grid"></div>
+            <div class="gate-glow"></div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeErrorModal()">&times;</span>
+            <h3>❌ Access Denied</h3>
+            <p id="errorMessage">Invalid access code. Please contact +1 (313) 352-9003 for assistance.</p>
+        </div>
+    </div>
+
+    <script>
+        // Access codes (you can change these)
+        const ACCESS_CODES = [
+            'SYNDICATE2024',
+            'PROTOCOL',
+            'NEWINTERNET',
+            'INFRASTRUCTURE',
+            '4COMMAS'
+        ];
+
+        // Check if user already has access
+        window.addEventListener('load', () => {
+            const hasAgreed = localStorage.getItem('syndicate_agreement');
+            const hasAccess = localStorage.getItem('syndicate_access');
+
+            if (hasAgreed !== 'accepted') {
+                window.location.href = 'agreement.html';
+                return;
+            }
+
+            if (hasAccess === 'granted') {
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Access form handler
+        document.getElementById('accessForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const code = document.getElementById('accessCode').value.toUpperCase();
+            const accessBtn = document.getElementById('accessBtn');
+            
+            // Show loading state
+            accessBtn.innerHTML = 'VERIFYING...';
+            accessBtn.disabled = true;
+            
+            setTimeout(() => {
+                if (ACCESS_CODES.includes(code)) {
+                    // Grant access
+                    localStorage.setItem('syndicate_access', 'granted');
+                    accessBtn.innerHTML = '✅ ACCESS GRANTED';
+                    accessBtn.style.background = 'linear-gradient(135deg, #059669 0%, #10b981 100%)';
+                    
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 1000);
+                } else {
+                    // Deny access
+                    showErrorModal();
+                    accessBtn.innerHTML = 'ENTER SYNDICATE';
+                    accessBtn.disabled = false;
+                    document.getElementById('accessCode').value = '';
+                }
+            }, 1500);
+        });
+
+        // Show error modal
+        function showErrorModal() {
+            document.getElementById('errorModal').style.display = 'flex';
+        }
+
+        // Close error modal
+        function closeErrorModal() {
+            document.getElementById('errorModal').style.display = 'none';
+        }
+
+        // URL parameter access (for direct links with code)
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlCode = urlParams.get('code');
+        if (urlCode && ACCESS_CODES.includes(urlCode.toUpperCase())) {
+            localStorage.setItem('syndicate_access', 'granted');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

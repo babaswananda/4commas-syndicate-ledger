@@ -201,6 +201,15 @@
         </main>
     </div>
 
+    <script>
+        // Check access before loading page
+        window.addEventListener('load', () => {
+            const hasAccess = localStorage.getItem('syndicate_access');
+            if (hasAccess !== 'granted') {
+                window.location.href = 'access-gate.html';
+            }
+        });
+    </script>
     <script src="dashboard.js"></script>
 </body>
 </html>

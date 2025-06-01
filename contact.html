@@ -68,6 +68,12 @@
                         <div class="payment-icon">🍎</div>
                         <h3>Apple Pay</h3>
                         <p>Instant, secure payments via Apple Pay</p>
+                        <div class="applepay-details">
+                            <a href="tel:+13133529003" class="applepay-link">
+                                +1 (313) 352-9003
+                            </a>
+                            <p class="applepay-note">Call/text to set up Apple Pay transfer</p>
+                        </div>
                         <span class="payment-status">✅ Available</span>
                     </div>
                     
@@ -165,5 +171,23 @@
             <div class="bg-glow"></div>
         </div>
     </div>
+
+    <script>
+        // Check agreement and access before loading page
+        window.addEventListener('load', () => {
+            const hasAgreed = localStorage.getItem('syndicate_agreement');
+            const hasAccess = localStorage.getItem('syndicate_access');
+
+            if (hasAgreed !== 'accepted') {
+                window.location.href = 'agreement.html';
+                return;
+            }
+
+            if (hasAccess !== 'granted') {
+                window.location.href = 'access-gate.html';
+                return;
+            }
+        });
+    </script>
 </body>
 </html>
