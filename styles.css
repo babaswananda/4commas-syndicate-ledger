@@ -186,19 +186,35 @@ select {
     pointer-events: auto !important;
 }
 
-/* FORCE ALL HEADER TEXT INCLUDING EMOJIS */
-[class*="title"] *,
-[class*="header"] *,
-[class*="heading"] *,
-span:contains("🚀"),
-span:contains("💎"),
-span:contains("🪙"),
-span:contains("🔐"),
-span:contains("📊"),
-span:contains("⚡"),
-span:contains("🎯"),
-span:contains("💰"),
-span:contains("🌟") {
+/* FORCE ALL EMOJIS AND INTERACTIVE ELEMENTS TO TOP */
+* {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+button,
+input,
+form,
+a,
+[role="button"],
+.btn,
+.button,
+.nav-link,
+.header-btn,
+.contact-btn,
+.cta-button,
+.submit-btn {
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* EMOJI SPECIFIC FIXES */
+span,
+.icon,
+h1, h2, h3, h4, h5, h6 {
     position: relative !important;
     z-index: 9999 !important;
     display: inline !important;
