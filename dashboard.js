@@ -1,6 +1,6 @@
 // Supabase Configuration
 const SUPABASE_URL = 'https://dznaeogribeswzhvefwt.supabase.co'
-const SUPABASE_ANON_KEY = 'YOUR_NEW_ANON_KEY_HERE'
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR6bmFlb2dyaWJlc3d6aHZlZnd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg4MDQxNjIsImV4cCI6MjA2NDM4MDE2Mn0.lQrKDrFHxq3gzub7SKpZpGzu6ZukiM3smzCuI6sH_Ew'
 
 // Initialize Supabase client
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)

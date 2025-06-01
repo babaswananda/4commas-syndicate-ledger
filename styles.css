@@ -209,7 +209,7 @@ body::before {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 50px 50px;
+    background-size: 40px 40px;
     pointer-events: none;
     z-index: -2;
 }
@@ -3154,7 +3154,7 @@ blockquote {
     background-image:
         linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
+    background-size: 40px 40px;
     opacity: 0.3;
 }
 
@@ -3163,10 +3163,22 @@ blockquote {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(147, 51, 234, 0.2) 0%, transparent 70%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, rgba(168, 85, 247, 0.2) 40%, transparent 70%);
     border-radius: 50%;
+    animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }
 
 /* Modal Styles */
@@ -4953,13 +4965,13 @@ blockquote {
 .fugio-header h3 {
     font-size: 36px;
     font-weight: 700;
-    color: #FFD700;
+    color: #A855F7;
     margin-bottom: 12px;
 }
 
 .fugio-tagline {
     font-size: 24px;
-    color: #FFA500;
+    color: #9333EA;
     font-weight: 600;
     margin-bottom: 8px;
 }
@@ -4973,7 +4985,7 @@ blockquote {
 
 .fugio-quote {
     background: rgba(0, 0, 0, 0.3);
-    border-left: 4px solid #FFD700;
+    border-left: 4px solid #A855F7;
     padding: 20px;
     border-radius: 8px;
     font-style: italic;
@@ -4983,7 +4995,7 @@ blockquote {
 
 .fugio-quote p {
     font-size: 18px;
-    color: #FFD700;
+    color: #A855F7;
     margin-bottom: 8px;
 }
 
@@ -4999,7 +5011,7 @@ blockquote {
 
 .fugio-comparison h4 {
     font-size: 28px;
-    color: #FFD700;
+    color: #A855F7;
     margin-bottom: 20px;
 }
 
@@ -5011,7 +5023,7 @@ blockquote {
 
 .comparison-emphasis {
     font-size: 20px;
-    color: #FFA500;
+    color: #9333EA;
     font-weight: 600;
 }
 
@@ -5031,7 +5043,7 @@ blockquote {
 .layer-col {
     padding: 16px;
     font-weight: 700;
-    color: #FFD700;
+    color: #A855F7;
     text-align: center;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -5049,7 +5061,7 @@ blockquote {
 .layer-name {
     padding: 16px;
     font-weight: 600;
-    color: #FFA500;
+    color: #9333EA;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -5061,7 +5073,7 @@ blockquote {
 .layers-summary {
     text-align: center;
     font-size: 18px;
-    color: #FFD700;
+    color: #A855F7;
     font-weight: 600;
     margin-top: 24px;
 }
@@ -5085,7 +5097,7 @@ blockquote {
 .protocol-tld {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
-    color: #FFD700;
+    color: #A855F7;
     min-width: 150px;
 }
 
@@ -5125,7 +5137,7 @@ blockquote {
 .ai-new p {
     background: rgba(255, 215, 0, 0.1);
     border: 1px solid rgba(255, 215, 0, 0.3);
-    color: #FFD700;
+    color: #A855F7;
 }
 
 .ai-features {
@@ -5137,14 +5149,14 @@ blockquote {
 .ai-feature {
     padding: 12px 16px;
     background: rgba(255, 215, 0, 0.05);
-    border-left: 3px solid #FFD700;
+    border-left: 3px solid #A855F7;
     color: rgba(255, 255, 255, 0.9);
 }
 
 .ai-summary {
     text-align: center;
     font-size: 18px;
-    color: #FFA500;
+    color: #9333EA;
     font-weight: 600;
     margin-top: 24px;
 }
@@ -5174,13 +5186,13 @@ blockquote {
 
 .fugio-cta h5 {
     font-size: 20px;
-    color: #FFD700;
+    color: #A855F7;
     margin-bottom: 12px;
 }
 
 .cta-title {
     font-size: 24px;
-    color: #FFA500;
+    color: #9333EA;
     font-weight: 700;
     margin-bottom: 16px;
 }
@@ -5193,7 +5205,7 @@ blockquote {
 
 .cta-tagline {
     font-style: italic;
-    color: #FFD700;
+    color: #A855F7;
     font-weight: 600;
 }
 
@@ -5208,7 +5220,7 @@ blockquote {
     position: absolute;
     top: -10px;
     right: 16px;
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
     color: #000000;
     padding: 4px 12px;
     border-radius: 12px;
