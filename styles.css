@@ -3054,16 +3054,16 @@ blockquote {
 
 .agreement-header {
     text-align: center;
-    padding: 60px 0 40px 0;
+    padding: 30px 0 20px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.agreement-header .brand {
+.agreement-header .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .agreement-header .logo-image {
@@ -3075,14 +3075,6 @@ blockquote {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.agreement-header .brand-name {
-    font-size: 24px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 2px;
-    line-height: 1;
 }
 
 .agreement-header .tagline {
@@ -3100,64 +3092,64 @@ blockquote {
 }
 
 .agreement-content {
-    padding: 60px 0;
+    padding: 30px 0;
 }
 
 .agreement-text {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .agreement-section {
-    margin-bottom: 48px;
-    padding: 32px;
+    margin-bottom: 24px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
+    border-radius: 12px;
     backdrop-filter: blur(10px);
 }
 
 .agreement-section h2 {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 700;
     color: #A855F7;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .agreement-section h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 24px 0 12px 0;
-}
-
-.agreement-section h4 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #ffffff;
     margin: 16px 0 8px 0;
 }
 
+.agreement-section h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 12px 0 6px 0;
+}
+
 .agreement-section p {
-    font-size: 15px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    margin-bottom: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .agreement-section ul {
     list-style: none;
     padding: 0;
-    margin: 16px 0;
+    margin: 12px 0;
 }
 
 .agreement-section li {
-    font-size: 15px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    margin-bottom: 12px;
-    padding-left: 24px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-left: 16px;
     position: relative;
 }
 
@@ -3178,31 +3170,31 @@ blockquote {
 .agreement-actions {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 40px;
+    border-radius: 16px;
+    padding: 24px;
     text-align: center;
 }
 
 .agreement-checkbox {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 12px;
+    margin-bottom: 16px;
     text-align: left;
 }
 
 .agreement-checkbox input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     margin: 0;
     flex-shrink: 0;
     accent-color: #A855F7;
 }
 
 .agreement-checkbox label {
-    font-size: 15px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.5;
+    line-height: 1.4;
     cursor: pointer;
 }
 
