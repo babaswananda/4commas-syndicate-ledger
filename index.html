@@ -250,7 +250,7 @@
             <div class="section-intro">
                 <h2 class="section-title">🌐 The Syndicate Ledger</h2>
                 <p class="section-subtitle">The Early Access Gateway to the New Internet</p>
-                <p class="new-internet-intro">You're not just backing domains — you're securing routes, agents, and protocol assets that power the next version of the internet.</p>
+                <p class="new-internet-intro">You're not just backing domains — you're securing routes, agents, and protocol assets from our 3000+ TLD portfolio that power the next version of the internet.</p>
             </div>
 
             <div class="ledger-content">
@@ -278,7 +278,7 @@
 
                 <div class="syndicate-stack">
                     <h3>🧭 SYNDICATE LEDGER STACK</h3>
-                    <p class="stack-intro">The Real Infrastructure of the New Internet — Powered by Your Portfolio</p>
+                    <p class="stack-intro">The Real Infrastructure of the New Internet — Powered by 3000+ TLD Portfolio</p>
                 </div>
 
                 <div class="protocol-categories">
@@ -511,7 +511,7 @@
                     <h3>🏁 FINAL LAUNCH POSITIONING</h3>
                     <div class="positioning-message">
                         <p><strong>You're not just investing in domains.<br>
-                        You're claiming territory on the next internet — with full agent deployment, token rails, and verified trade infrastructure.</strong></p>
+                        You're claiming territory from our 3000+ TLD empire on the next internet — with full agent deployment, token rails, and verified trade infrastructure.</strong></p>
                         <p class="positioning-tagline">This is digital real estate, protocol equity, and AI infrastructure in one.</p>
                     </div>
                 </div>
@@ -1013,8 +1013,8 @@
 
             <div class="licensing-intro" data-aos="fade-up">
                 <div class="intro-content">
-                    <h4>You're building a protocol empire. Each namespace is an engine — and each engine has licensable components.</h4>
-                    <p>Every TLD (route) you own produces multiple revenue points. Here's how they break down:</p>
+                    <h4>You're accessing a 3000+ TLD protocol empire. Each namespace is an engine — and each engine has licensable components.</h4>
+                    <p>Every TLD (route) in our portfolio produces multiple revenue points. Here's how they break down:</p>
                 </div>
             </div>
 
@@ -1871,15 +1871,19 @@
             const hasLandingAccess = localStorage.getItem('landing_access');
             const hasAgreed = localStorage.getItem('syndicate_agreement');
 
+            // Always redirect to landing if no access
             if (hasLandingAccess !== 'granted') {
                 window.location.href = 'landing.html';
                 return;
             }
 
+            // Redirect to agreement if access but no agreement
             if (hasAgreed !== 'accepted') {
                 window.location.href = 'agreement.html';
                 return;
             }
+
+            // If both checks pass, user can access the main site
         });
     </script>
     <script src="script.js"></script>
