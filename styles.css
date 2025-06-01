@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: auto !important;
 }
 
-/* Futuristic grid overlay */
+/* Futuristic grid overlay - SINGLE LAYER */
 body::before {
     content: '';
     position: fixed;
@@ -234,7 +234,7 @@ body::before {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 15px 15px;
+    background-size: 25px 25px;
     pointer-events: none;
     z-index: -2;
 }
@@ -479,7 +479,7 @@ body::after {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: radial-gradient(ellipse at center, rgba(147, 51, 234, 0.1) 0%, #000000 70%);
+    background: #000000;
     padding-top: 0px;
     margin-top: -40px;
 }
@@ -5550,12 +5550,14 @@ blockquote {
         padding: 0 16px;
     }
 
-    /* Header Mobile */
-    .header {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px 0;
-        position: relative;
+    /* Header Mobile - KEEP HORIZONTAL ON DESKTOP */
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            gap: 16px;
+            padding: 16px 0;
+            position: relative;
+        }
     }
 
     .logo {
