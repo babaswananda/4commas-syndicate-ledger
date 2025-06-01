@@ -4448,6 +4448,288 @@ blockquote {
     margin-bottom: 24px;
 }
 
+/* Fugio Protocol Styles */
+.fugio-section {
+    margin: 60px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 165, 0, 0.05) 100%);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.fugio-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fugio-header h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFD700;
+    margin-bottom: 12px;
+}
+
+.fugio-tagline {
+    font-size: 24px;
+    color: #FFA500;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.fugio-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.fugio-quote {
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #FFD700;
+    padding: 20px;
+    border-radius: 8px;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.fugio-quote p {
+    font-size: 18px;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.quote-attribution {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.fugio-comparison {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.fugio-comparison h4 {
+    font-size: 28px;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.comparison-text p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+}
+
+.comparison-emphasis {
+    font-size: 20px;
+    color: #FFA500;
+    font-weight: 600;
+}
+
+.layers-table {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 24px 0;
+}
+
+.layer-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.layer-col {
+    padding: 16px;
+    font-weight: 700;
+    color: #FFD700;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.layer-col:last-child {
+    border-right: none;
+}
+
+.layer-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.layer-name {
+    padding: 16px;
+    font-weight: 600;
+    color: #FFA500;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.layer-function {
+    padding: 16px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.layers-summary {
+    text-align: center;
+    font-size: 18px;
+    color: #FFD700;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.fugio-protocols {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.fugio-protocol {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.protocol-tld {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: #FFD700;
+    min-width: 150px;
+}
+
+.protocol-role {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+}
+
+.stack-note {
+    text-align: center;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 24px;
+}
+
+.ai-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+
+.ai-old p,
+.ai-new p {
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.ai-old p {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+.ai-new p {
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #FFD700;
+}
+
+.ai-features {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.ai-feature {
+    padding: 12px 16px;
+    background: rgba(255, 215, 0, 0.05);
+    border-left: 3px solid #FFD700;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ai-summary {
+    text-align: center;
+    font-size: 18px;
+    color: #FFA500;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.fugio-benefits {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.benefit {
+    padding: 12px 16px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.fugio-cta {
+    text-align: center;
+    margin-top: 32px;
+    padding: 32px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 16px;
+}
+
+.fugio-cta h5 {
+    font-size: 20px;
+    color: #FFD700;
+    margin-bottom: 12px;
+}
+
+.cta-title {
+    font-size: 24px;
+    color: #FFA500;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.cta-actions p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+}
+
+.cta-tagline {
+    font-style: italic;
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.protocol-card.featured {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 165, 0, 0.05) 100%);
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    position: relative;
+}
+
+.protocol-card.featured::before {
+    content: "⭐ FLAGSHIP";
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #000000;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
 /* Protocol Categories Styling */
 .syndicate-stack {
     text-align: center;

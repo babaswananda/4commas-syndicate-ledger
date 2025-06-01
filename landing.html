@@ -16,6 +16,12 @@
                 <h1 class="landing-title">"This Is Not a Startup. This Is a Stack."</h1>
                 <p class="landing-subtitle">For: Investors • Operators • Syndicate Access Only</p>
             </div>
+            <div class="header-cta">
+                <div class="countdown-timer">
+                    <span class="countdown-label">OFFER EXPIRES IN</span>
+                    <div class="countdown-time" id="landingCountdown">24:00:00</div>
+                </div>
+            </div>
         </header>
 
         <!-- Main Content -->
@@ -220,6 +226,35 @@
                 }
             });
         });
+
+        // Countdown Timer
+        function startCountdown() {
+            const targetDate = new Date('June 4, 2025 23:59:59').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    document.getElementById('landingCountdown').innerHTML = "EXPIRED";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('landingCountdown').innerHTML =
+                    `${days}d ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Start countdown
+        startCountdown();
 
         // Add some interactive effects
         document.addEventListener('DOMContentLoaded', function() {
