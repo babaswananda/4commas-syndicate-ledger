@@ -3015,21 +3015,39 @@ blockquote {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.agreement-logo {
-    width: 120px;
-    height: 60px;
+.agreement-header .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     margin-bottom: 24px;
 }
 
-.agreement-title {
-    font-size: 32px;
+.agreement-header .logo-image {
+    width: 80px;
+    height: 40px;
+}
+
+.agreement-header .brand-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.agreement-header .brand-name {
+    font-size: 24px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 12px;
-    background: linear-gradient(135deg, #A855F7 0%, #ffffff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.agreement-header .tagline {
+    font-size: 12px;
+    color: #A855F7;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .agreement-subtitle {
