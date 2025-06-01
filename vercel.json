@@ -1,0 +1,55 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/landing.html"
+    },
+    {
+      "source": "/landing",
+      "destination": "/landing.html"
+    },
+    {
+      "source": "/agreement",
+      "destination": "/agreement.html"
+    },
+    {
+      "source": "/main",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/dashboard.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/tld-explained",
+      "destination": "/tld-explained.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}

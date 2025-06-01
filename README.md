@@ -1,39 +1,63 @@
-# Genesis Protocol Landing Page
+# 4 Commas Syndicate Ledger
 
-A professional, modern landing page for your Genesis Protocol offer. This is a single-page application designed to convert visitors into qualified leads for your exclusive investment opportunity.
+The Sovereign Wealth Engine of the New Internet - A comprehensive platform for protocol-level investment opportunities, featuring live auctions, syndicate access, and digital infrastructure ownership.
+
+## 🚀 Live Deployment
+- **Production**: https://4commas-syndicate-ledger.vercel.app
+- **Repository**: https://github.com/babaswananda/4commas-syndicate-ledger
 
 ## Features
 
+### 🏛️ **Multi-Page Architecture**
+- **Landing Page**: Private registry access with protocol portfolio overview
+- **Agreement Page**: Legal terms and NDA-style positioning
+- **Main Site**: Comprehensive syndicate ledger with live auctions
+- **Dashboard**: Member portal with Supabase authentication
+- **Contact Page**: Multi-payment integration (Apple Pay, CashApp, Crypto)
+- **TLD Explained**: Educational content about IDIDD protocol
+
 ### 🎨 **Premium Design**
-- Dark, professional theme with gradient accents
-- Responsive design that works on all devices
-- Smooth animations and hover effects
-- Modern typography using Inter font
+- Apple x SpaceX x Black Mirror aesthetic (jet black, titanium)
+- Cinematic animated hero sections with scroll triggers
+- Money glitch effects and interactive elements
+- Modern typography using Inter and Playfair Display fonts
 
-### 🎯 **Conversion Optimized**
-- Clear value proposition and urgency messaging
-- Two distinct option tiers (Genesis Angel vs Founding Syndicate)
-- Interactive option selection with visual feedback
-- Professional contact form with validation
+### 🔐 **Authentication & Access Control**
+- Supabase integration for user management
+- Tiered access system with localStorage flow
+- Dashboard functionality for paid users
+- Demo login: demo@4commas.com / syndicate2024
 
-### ⚡ **Interactive Elements**
-- Modal-based contact form
-- Success confirmation with message preview
-- Keyboard shortcuts (1 for Option A, 2 for Option B, Esc to close)
-- Smooth scrolling and parallax effects
+### 💰 **Payment Integration**
+- Apple Pay integration (+1 (313) 352-9003)
+- CashApp QR codes
+- Cryptocurrency payment options
+- Automated receipt and licensing flows
 
-### 📱 **Mobile Responsive**
-- Optimized for mobile, tablet, and desktop
-- Touch-friendly buttons and forms
-- Readable typography at all screen sizes
+### 🌐 **Protocol Infrastructure**
+- 3000+ TLD portfolio management
+- IDIDD (Intelligent Digital Identity, Decentralized) protocol
+- Multi-layer protocol structure (Identity/Trade/Agents/Hardware/Tokenization)
+- Live auction system for protocol assets
 
 ## File Structure
 
 ```
-├── index.html          # Main HTML structure
-├── styles.css          # All styling and responsive design
-├── script.js           # Interactive functionality
-└── README.md          # This documentation
+├── landing.html        # Entry point - Private registry access
+├── agreement.html      # Legal terms and NDA
+├── index.html          # Main syndicate ledger site
+├── dashboard.html      # Member dashboard
+├── login.html          # Authentication page
+├── contact.html        # Payment and contact page
+├── tld-explained.html  # Educational content
+├── styles.css          # Comprehensive styling
+├── script.js           # Main site functionality
+├── dashboard.js        # Dashboard and Supabase integration
+├── login.js            # Authentication logic
+├── 4commas-3-14-2025-4.gif  # Brand logo/animation
+├── package.json        # Project configuration
+├── vercel.json         # Deployment configuration
+└── README.md           # This documentation
 ```
 
 ## How to Use
