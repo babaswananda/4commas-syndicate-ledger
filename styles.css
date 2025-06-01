@@ -3333,6 +3333,16 @@ blockquote {
     text-align: center;
     padding: 60px 0 40px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.landing-header .header-cta {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .landing-logo {
