@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol Portfolio - This Is Not a Startup. This Is a Stack.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="landing-page">
+    <div class="landing-container">
+        <!-- Header -->
+        <header class="landing-header">
+            <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="landing-logo">
+            <div class="landing-tagline">
+                <h1 class="landing-title">"This Is Not a Startup. This Is a Stack."</h1>
+                <p class="landing-subtitle">For: Investors • Operators • Syndicate Access Only</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="landing-main">
+            <!-- Hero Section -->
+            <section class="landing-hero">
+                <h2 class="hero-title">Welcome to the Protocol Portfolio</h2>
+                <p class="hero-description">
+                    The world's first private registry of AI-native domains, agent networks, trade infrastructure, and digital property rights — all for sale, all pre-monetized.
+                </p>
+                <div class="hero-statement">
+                    <p class="statement-primary">This isn't branding. This is ownership.</p>
+                    <p class="statement-secondary">Domains. Tokens. Agents. Chips. Real estate.</p>
+                    <p class="statement-emphasis">You're not early — you're foundational.</p>
+                </div>
+            </section>
+
+            <!-- What's Behind Gate -->
+            <section class="landing-section">
+                <h3 class="section-title">🔑 What's Behind This Gate?</h3>
+                <p class="section-intro">If you've been invited here, you're looking at:</p>
+                <ul class="feature-list">
+                    <li>🔐 Early access to live auctions on rare internet assets</li>
+                    <li>🧠 Full-stack infrastructure: AI, crypto, manufacturing, export, chat agents</li>
+                    <li>📜 Verified portfolio of over 100 protocol-level domains</li>
+                    <li>📈 Private offerings before public listings</li>
+                    <li>💰 Built-in monetization (licensing, tokenization, resale, syndication)</li>
+                </ul>
+            </section>
+
+            <!-- Target Audience -->
+            <section class="landing-section">
+                <h3 class="section-title">💼 Who Is This For?</h3>
+                <ul class="audience-list">
+                    <li>Private investors & syndicate partners</li>
+                    <li>Digital real estate buyers</li>
+                    <li>Web3 infrastructure operators</li>
+                    <li>High-level builders, traders, and owners</li>
+                    <li>Family offices seeking asymmetric upside</li>
+                </ul>
+                <p class="audience-filter">If that's not you, this probably isn't your link.</p>
+            </section>
+
+            <!-- Protocol Stack -->
+            <section class="landing-section">
+                <h3 class="section-title">🔥 What Makes This Different?</h3>
+                <p class="stack-intro">This isn't just a domain portfolio.<br>It's the stack beneath the New Internet:</p>
+                
+                <div class="protocol-table">
+                    <div class="table-header">
+                        <span class="table-col-header">Layer</span>
+                        <span class="table-col-header">Protocol</span>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-layer">Identity</span>
+                        <span class="table-protocols">.signatureai, .textme, .digitalidwallet</span>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-layer">Trade</span>
+                        <span class="table-protocols">.chamberofcommerce, .ftz, .madeinusa</span>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-layer">Agents</span>
+                        <span class="table-protocols">.aiagents, .mcpserver, .agentos</span>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-layer">Hardware</span>
+                        <span class="table-protocols">.superchip, .gpucloud, .neuralprocessor</span>
+                    </div>
+                    <div class="table-row">
+                        <span class="table-layer">Tokenization</span>
+                        <span class="table-protocols">.utilitycoin, .fugio, .moneyglitch</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What Happens -->
+            <section class="landing-section">
+                <h3 class="section-title">🧭 What Happens When You Sign In?</h3>
+                <p class="section-intro">You'll unlock:</p>
+                <ul class="unlock-list">
+                    <li>📂 Your investor dashboard</li>
+                    <li>📄 Downloadable deal sheets + whitepapers</li>
+                    <li>🪙 Active auction listings and next drop calendar</li>
+                    <li>🎟️ Access to live calls, walkthroughs, and private showings</li>
+                    <li>🔐 Full details on licensing, token tiers, and protocol strategy</li>
+                </ul>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="landing-cta">
+                <h3 class="cta-title">🚪 This Is Your Gate. Walk Through It.</h3>
+                <button class="cta-button" onclick="enterStack()">
+                    SIGN IN TO VIEW THE STACK
+                </button>
+                <div class="cta-footer">
+                    <p>No hype. No ads. No affiliate links.</p>
+                    <p>Just raw access to the future — while it's still claimable.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <p>This is Door Zero. Everything else lives behind it.</p>
+        </footer>
+
+        <!-- Background Effects -->
+        <div class="landing-bg">
+            <div class="bg-grid"></div>
+            <div class="bg-glow"></div>
+        </div>
+    </div>
+
+    <script>
+        function enterStack() {
+            // Redirect to agreement page
+            window.location.href = 'agreement.html';
+        }
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('.landing-section, .landing-cta').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
