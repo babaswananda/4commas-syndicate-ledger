@@ -186,11 +186,11 @@ select {
     pointer-events: auto !important;
 }
 
-/* FORCE ALL EMOJIS AND INTERACTIVE ELEMENTS TO TOP */
-* {
+/* Remove universal z-index that was causing conflicts */
+/* * {
     position: relative !important;
     z-index: 1 !important;
-}
+} */
 
 button,
 input,
@@ -234,7 +234,7 @@ body::before {
     background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 25px 25px;
+    background-size: 30px 30px; /* Increased from 25px to 30px as requested */
     pointer-events: none;
     z-index: -2;
 }
@@ -822,7 +822,7 @@ body::after {
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 700;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, #ffffff 0%, #A855F7 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #A855F7 50%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1235,7 +1235,7 @@ blockquote {
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 700;
     margin-bottom: 16px;
-    background: linear-gradient(135deg, #ffffff 0%, #A855F7 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #A855F7 50%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -3168,7 +3168,8 @@ blockquote {
     z-index: 1;
 }
 
-.bg-grid {
+/* Removed duplicate grid layer to fix overlapping issue */
+/* .bg-grid {
     position: absolute;
     top: 0;
     left: 0;
@@ -5550,14 +5551,12 @@ blockquote {
         padding: 0 16px;
     }
 
-    /* Header Mobile - KEEP HORIZONTAL ON DESKTOP */
-    @media (max-width: 768px) {
-        .header {
-            flex-direction: column;
-            gap: 16px;
-            padding: 16px 0;
-            position: relative;
-        }
+    /* Header Mobile Styles */
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 0;
+        position: relative;
     }
 
     .logo {
@@ -6226,6 +6225,36 @@ blockquote {
     margin: 0 auto;
 }
 
+/* 21st.dev Glowing Effect Component */
+.glow-effect {
+    position: relative;
+    border: 1px solid #A855F7;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.glow-effect::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 14px;
+    background: linear-gradient(45deg, #A855F7, transparent, #A855F7, transparent);
+    z-index: -1;
+    animation: pulse-glow 2s linear infinite;
+}
+
+.glow-effect::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 11px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
 .contact-option {
     display: flex;
     align-items: center;
@@ -6245,6 +6274,16 @@ blockquote {
 .contact-option.primary {
     border-color: #A855F7;
     background: rgba(168, 85, 247, 0.1);
+}
+
+/* Apply glow effect to primary contact option */
+.contact-option.primary {
+    border: none;
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.contact-option.primary.glow-effect::after {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .contact-icon {
@@ -6487,9 +6526,10 @@ blockquote {
 .contact-footer {
     text-align: center;
     padding: 40px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
     color: rgba(255, 255, 255, 0.5);
     font-size: 14px;
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.05) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 /* Contact Background */
