@@ -2331,12 +2331,66 @@
         });
     </script>
 
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="GAWD.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+        🔊
+    </button>
+
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
         ↑
     </button>
 
     <script>
+        // Background Music functionality
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        let isMusicPlaying = false;
+
+        // Auto-play music on page load (with user interaction fallback)
+        function initMusic() {
+            backgroundMusic.volume = 0.3; // Set volume to 30%
+
+            // Try to auto-play
+            const playPromise = backgroundMusic.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isMusicPlaying = true;
+                    musicToggle.textContent = '🔊';
+                    musicToggle.classList.remove('muted');
+                }).catch(() => {
+                    // Auto-play failed, wait for user interaction
+                    isMusicPlaying = false;
+                    musicToggle.textContent = '🔇';
+                    musicToggle.classList.add('muted');
+                });
+            }
+        }
+
+        // Toggle music on/off
+        musicToggle.addEventListener('click', () => {
+            if (isMusicPlaying) {
+                backgroundMusic.pause();
+                musicToggle.textContent = '🔇';
+                musicToggle.classList.add('muted');
+                isMusicPlaying = false;
+            } else {
+                backgroundMusic.play();
+                musicToggle.textContent = '🔊';
+                musicToggle.classList.remove('muted');
+                isMusicPlaying = true;
+            }
+        });
+
+        // Initialize music when page loads
+        document.addEventListener('DOMContentLoaded', initMusic);
+
         // Scroll to Top functionality
         const scrollToTopBtn = document.getElementById('scrollToTop');
 
