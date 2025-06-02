@@ -1,4 +1,6 @@
 {
+  "buildCommand": null,
+  "outputDirectory": ".",
   "rewrites": [
     {
       "source": "/",
@@ -31,6 +33,18 @@
     {
       "source": "/tld-explained",
       "destination": "/tld-explained.html"
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio.html"
+    },
+    {
+      "source": "/auctions",
+      "destination": "/auctions.html"
+    },
+    {
+      "source": "/join",
+      "destination": "/join.html"
     }
   ],
   "headers": [
@@ -53,3 +67,4 @@
     }
   ]
 }
+

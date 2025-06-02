@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Join Syndicate - 4 Commas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="join-page">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="logo-image">
+                <div class="brand-stack">
+                    <span class="tagline">JOIN THE SYNDICATE</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="auctions.html" class="nav-link">Live Auctions</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-cta">
+                <div class="countdown-timer">
+                    <span class="countdown-label">OFFER EXPIRES IN</span>
+                    <div class="countdown-time" id="countdown">24:00:00</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section with Same Background as Main -->
+        <section class="hero join-hero">
+            <div class="hero-bg">
+                <div class="money-rain"></div>
+                <div class="glitch-overlay"></div>
+                <div class="matrix-code"></div>
+                <canvas id="money-canvas"></canvas>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line">🏛️ Join the Syndicate Ledger</span>
+                    <span class="line">Infrastructure-to-Own</span>
+                </h1>
+                <p class="hero-description">
+                    Secure your position in the New Internet infrastructure. Choose your tier and gain access to protocol ownership, AI agent licensing, and profit participation.
+                </p>
+                <div class="value-props">
+                    <div class="value-prop">
+                        <span class="prop-icon">🌐</span>
+                        <span>3000+ Protocol Portfolio</span>
+                    </div>
+                    <div class="value-prop">
+                        <span class="prop-icon">🤖</span>
+                        <span>AI Agent Licensing</span>
+                    </div>
+                    <div class="value-prop">
+                        <span class="prop-icon">💰</span>
+                        <span>Profit Participation</span>
+                    </div>
+                    <div class="value-prop">
+                        <span class="prop-icon">🎯</span>
+                        <span>Genesis Backer Access</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Tier Selection -->
+        <section class="enhanced-tiers" id="tiers">
+            <div class="section-header">
+                <h2>🎯 Choose Your Syndicate Tier</h2>
+                <p>Each tier unlocks different levels of protocol access and profit participation</p>
+            </div>
+
+            <div class="tiers-container">
+                <!-- Tier 1: Angel -->
+                <div class="enhanced-tier tier-1" data-tier="1">
+                    <div class="tier-header">
+                        <div class="tier-badge">STARTER</div>
+                        <h3>TIER 1: ANGEL</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">$100</span>
+                            <span class="price-period">one-time</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        <p>Perfect for first-time protocol backers. Get your foot in the door of the New Internet infrastructure.</p>
+                    </div>
+                    <div class="tier-benefits">
+                        <h4>What You Get:</h4>
+                        <ul>
+                            <li>✅ 1 subdomain + AI agent license</li>
+                            <li>✅ Early claim rights on new protocols</li>
+                            <li>✅ Syndicate NFT membership badge</li>
+                            <li>✅ Name inscribed on Protocol Wall</li>
+                            <li>✅ Access to member-only updates</li>
+                            <li>✅ Genesis Backer auction access</li>
+                        </ul>
+                    </div>
+                    <div class="tier-roi">
+                        <span class="roi-label">Projected ROI:</span>
+                        <span class="roi-value">5x - 50x</span>
+                    </div>
+                    <button class="tier-select-btn" onclick="selectTier(1)">
+                        SELECT ANGEL TIER
+                    </button>
+                </div>
+
+                <!-- Tier 2: Builder -->
+                <div class="enhanced-tier tier-2" data-tier="2">
+                    <div class="tier-header">
+                        <div class="tier-badge">GROWTH</div>
+                        <h3>TIER 2: BUILDER</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">$250</span>
+                            <span class="price-period">one-time</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        <p>For serious protocol builders who want multiple assets and priority access to new launches.</p>
+                    </div>
+                    <div class="tier-benefits">
+                        <h4>Everything in Angel, plus:</h4>
+                        <ul>
+                            <li>✅ 2 subdomains on any future protocols</li>
+                            <li>✅ Priority access to new launches</li>
+                            <li>✅ Builder status badge</li>
+                            <li>✅ Quarterly strategy calls</li>
+                            <li>✅ Early beta access to tools</li>
+                        </ul>
+                    </div>
+                    <div class="tier-roi">
+                        <span class="roi-label">Projected ROI:</span>
+                        <span class="roi-value">8x - 75x</span>
+                    </div>
+                    <button class="tier-select-btn" onclick="selectTier(2)">
+                        SELECT BUILDER TIER
+                    </button>
+                </div>
+
+                <!-- Tier 3: Architect (Featured) -->
+                <div class="enhanced-tier tier-3 featured" data-tier="3">
+                    <div class="tier-header">
+                        <div class="tier-badge popular">MOST POPULAR</div>
+                        <h3>TIER 3: ARCHITECT</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">$500</span>
+                            <span class="price-period">one-time</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        <p>The sweet spot for serious investors. Get profit participation and strategic protocol assets.</p>
+                    </div>
+                    <div class="tier-benefits">
+                        <h4>Everything in Builder, plus:</h4>
+                        <ul>
+                            <li>✅ 3 subdomains + full agent suite</li>
+                            <li>✅ 1% profit participation across portfolio</li>
+                            <li>✅ Architect status + exclusive updates</li>
+                            <li>✅ Early access to protocol tools</li>
+                            <li>✅ Direct line to protocol team</li>
+                            <li>✅ Governance voting rights</li>
+                        </ul>
+                    </div>
+                    <div class="tier-roi">
+                        <span class="roi-label">Projected ROI:</span>
+                        <span class="roi-value">15x - 100x + 1% profit</span>
+                    </div>
+                    <button class="tier-select-btn featured" onclick="selectTier(3)">
+                        SELECT ARCHITECT TIER
+                    </button>
+                </div>
+
+                <!-- Tier 4: Syndicate -->
+                <div class="enhanced-tier tier-4" data-tier="4">
+                    <div class="tier-header">
+                        <div class="tier-badge">PREMIUM</div>
+                        <h3>TIER 4: SYNDICATE</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">$1,000</span>
+                            <span class="price-period">one-time</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        <p>For high-net-worth individuals who want significant protocol control and returns.</p>
+                    </div>
+                    <div class="tier-benefits">
+                        <h4>Everything in Architect, plus:</h4>
+                        <ul>
+                            <li>✅ 5+ agents, early token access</li>
+                            <li>✅ 2% net yield on namespace monetization</li>
+                            <li>✅ Syndicate member privileges</li>
+                            <li>✅ Private deal flow access</li>
+                            <li>✅ Custom protocol requests</li>
+                        </ul>
+                    </div>
+                    <div class="tier-roi">
+                        <span class="roi-label">Projected ROI:</span>
+                        <span class="roi-value">25x - 200x + 2% profit</span>
+                    </div>
+                    <button class="tier-select-btn" onclick="selectTier(4)">
+                        SELECT SYNDICATE TIER
+                    </button>
+                </div>
+
+                <!-- Tier 5: Inner Ledger -->
+                <div class="enhanced-tier tier-5" data-tier="5">
+                    <div class="tier-header">
+                        <div class="tier-badge exclusive">EXCLUSIVE</div>
+                        <h3>TIER 5: INNER LEDGER</h3>
+                        <div class="tier-price">
+                            <span class="price-amount">$2,500+</span>
+                            <span class="price-period">institutional</span>
+                        </div>
+                    </div>
+                    <div class="tier-description">
+                        <p>Institutional-level access with custom profit sharing and protocol influence.</p>
+                    </div>
+                    <div class="tier-benefits">
+                        <h4>Everything in Syndicate, plus:</h4>
+                        <ul>
+                            <li>✅ Custom % of upside on entire portfolio</li>
+                            <li>✅ Reserved protocol alias</li>
+                            <li>✅ Launch seats + multi-agent provisioning</li>
+                            <li>✅ Inner circle access</li>
+                            <li>✅ Co-investment opportunities</li>
+                            <li>✅ Protocol strategy input</li>
+                        </ul>
+                    </div>
+                    <div class="tier-roi">
+                        <span class="roi-label">Projected ROI:</span>
+                        <span class="roi-value">50x - 500x + custom %</span>
+                    </div>
+                    <button class="tier-select-btn" onclick="selectTier(5)">
+                        SELECT INNER LEDGER
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Methods -->
+        <section class="payment-methods">
+            <h2>💳 Payment Options</h2>
+            <div class="payment-grid">
+                <div class="payment-option">
+                    <div class="payment-icon">🍎</div>
+                    <h3>Apple Pay</h3>
+                    <p>Quick and secure payment with Touch ID or Face ID</p>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon">💸</div>
+                    <h3>Cash App</h3>
+                    <p>Instant transfer via QR code or $cashtag</p>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon">₿</div>
+                    <h3>Cryptocurrency</h3>
+                    <p>Bitcoin, Ethereum, and other major cryptocurrencies</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="join-faq">
+            <h2>❓ Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What exactly am I buying?</h3>
+                    <p>You're securing early access to protocol infrastructure, not equity. Think of it as digital real estate with utility and profit participation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I receive profits?</h3>
+                    <p>Profit distributions are made quarterly via your preferred payment method. Higher tiers receive larger percentages.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I upgrade my tier later?</h3>
+                    <p>Yes, you can upgrade at any time by paying the difference. Your benefits are cumulative.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if a protocol doesn't succeed?</h3>
+                    <p>Your access is to the entire portfolio. Individual protocol performance is balanced across 3000+ assets.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="auctions.html" class="footer-link">Live Auctions</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <p>&copy; 2024 4 Commas • The Sovereign Wealth Engine of the New Internet</p>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+
+        // Countdown timer
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            if (!countdownElement) return;
+
+            const targetDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    countdownElement.innerHTML = 'EXPIRED';
+                    return;
+                }
+
+                const hours = Math.floor(distance / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML =
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        // Select tier function
+        function selectTier(tierNumber) {
+            // Store selected tier
+            localStorage.setItem('selectedTier', tierNumber);
+            
+            // Redirect to contact page for payment
+            window.location.href = 'contact.html?tier=' + tierNumber;
+        }
+
+        // Money Canvas Animation (same as main hero)
+        function initMoneyCanvas() {
+            const canvas = document.getElementById('money-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const symbols = ['$', '€', '£', '¥', '₿', '◊'];
+            const particles = [];
+
+            class MoneyParticle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+                    this.speed = Math.random() * 2 + 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                    this.size = Math.random() * 20 + 10;
+                }
+
+                update() {
+                    this.y += this.speed;
+                    if (this.y > canvas.height) {
+                        this.y = -this.size;
+                        this.x = Math.random() * canvas.width;
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = '#A855F7';
+                    ctx.font = `${this.size}px Arial`;
+                    ctx.fillText(this.symbol, this.x, this.y);
+                    ctx.restore();
+                }
+            }
+
+            // Create particles
+            for (let i = 0; i < 50; i++) {
+                particles.push(new MoneyParticle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            startCountdown();
+            initMoneyCanvas();
+        });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script>
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

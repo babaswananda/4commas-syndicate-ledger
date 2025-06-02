@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Live Auctions - 4 Commas Syndicate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="auctions-page">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="logo-image">
+                <div class="brand-stack">
+                    <span class="tagline">LIVE AUCTIONS</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="join.html" class="nav-link">Join Syndicate</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-cta">
+                <div class="live-indicator">
+                    <span class="live-dot"></span>
+                    <span>LIVE AUCTIONS</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section with Same Background as Main -->
+        <section class="hero auctions-hero">
+            <div class="hero-bg">
+                <div class="money-rain"></div>
+                <div class="glitch-overlay"></div>
+                <div class="matrix-code"></div>
+                <canvas id="money-canvas"></canvas>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line">🔴 LIVE TLD AUCTIONS</span>
+                    <span class="line">Digital Real Estate Like CDs</span>
+                </h1>
+                <p class="hero-description">
+                    Invest in TLD auctions like certificates of deposit. When we win auctions, you get returns on your investment. Each TLD represents premium digital real estate with guaranteed utility and profit potential.
+                </p>
+                <div class="auction-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="activeAuctions">7</span>
+                        <span class="stat-label">Active Auctions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="totalBidders">23</span>
+                        <span class="stat-label">Active Bidders</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="totalVolume">$12.4M</span>
+                        <span class="stat-label">Total Volume</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Auctions Grid -->
+        <section class="live-auctions">
+            <div class="section-header">
+                <h2>🔥 Active Auctions</h2>
+                <p>Real-time bidding • Genesis Backer opportunities • Limited time offers</p>
+            </div>
+
+            <div class="auctions-grid">
+                <!-- Featured Auction: .sonnet -->
+                <div class="auction-card featured" data-auction="sonnet">
+                    <div class="auction-header">
+                        <div class="auction-title">
+                            <span class="protocol-name">.sonnet</span>
+                            <span class="auction-badge featured">FEATURED</span>
+                        </div>
+                        <div class="auction-timer" id="timer-sonnet">02:14:33</div>
+                    </div>
+                    <div class="auction-details">
+                        <p class="protocol-desc">Premium poetry and creative writing protocol with AI integration</p>
+                        <div class="auction-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Current Bid</span>
+                                <span class="metric-value" id="bid-sonnet">$1,847,500</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Bidders</span>
+                                <span class="metric-value" id="bidders-sonnet">8</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Est. Value</span>
+                                <span class="metric-value">$5M - $15M</span>
+                            </div>
+                        </div>
+                        <div class="bid-activity">
+                            <div class="activity-item">
+                                <span class="bidder">Bidder_7x9</span>
+                                <span class="bid-amount">$1,847,500</span>
+                                <span class="bid-time">2m ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="auction-cta" onclick="placeBid('sonnet')">PLACE BID</button>
+                </div>
+
+                <!-- Auction: .commandline -->
+                <div class="auction-card" data-auction="commandline">
+                    <div class="auction-header">
+                        <div class="auction-title">
+                            <span class="protocol-name">.commandline</span>
+                            <span class="auction-badge">LIVE</span>
+                        </div>
+                        <div class="auction-timer" id="timer-commandline">05:42:18</div>
+                    </div>
+                    <div class="auction-details">
+                        <p class="protocol-desc">Terminal-based AI agent interface and automation protocol</p>
+                        <div class="auction-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Current Bid</span>
+                                <span class="metric-value" id="bid-commandline">$892,000</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Bidders</span>
+                                <span class="metric-value" id="bidders-commandline">5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="auction-cta" onclick="placeBid('commandline')">PLACE BID</button>
+                </div>
+
+                <!-- Auction: .neuralprocessor -->
+                <div class="auction-card" data-auction="neuralprocessor">
+                    <div class="auction-header">
+                        <div class="auction-title">
+                            <span class="protocol-name">.neuralprocessor</span>
+                            <span class="auction-badge">HOT</span>
+                        </div>
+                        <div class="auction-timer" id="timer-neuralprocessor">01:33:45</div>
+                    </div>
+                    <div class="auction-details">
+                        <p class="protocol-desc">AI chip registration and monetization layer</p>
+                        <div class="auction-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Current Bid</span>
+                                <span class="metric-value" id="bid-neuralprocessor">$2,156,000</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Bidders</span>
+                                <span class="metric-value" id="bidders-neuralprocessor">12</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="auction-cta" onclick="placeBid('neuralprocessor')">PLACE BID</button>
+                </div>
+
+                <!-- Auction: .memeengine -->
+                <div class="auction-card" data-auction="memeengine">
+                    <div class="auction-header">
+                        <div class="auction-title">
+                            <span class="protocol-name">.memeengine</span>
+                            <span class="auction-badge">NEW</span>
+                        </div>
+                        <div class="auction-timer" id="timer-memeengine">23:17:52</div>
+                    </div>
+                    <div class="auction-details">
+                        <p class="protocol-desc">Viral content generation and meme monetization protocol</p>
+                        <div class="auction-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Current Bid</span>
+                                <span class="metric-value" id="bid-memeengine">$445,000</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Bidders</span>
+                                <span class="metric-value" id="bidders-memeengine">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="auction-cta" onclick="placeBid('memeengine')">PLACE BID</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Auctions -->
+        <section class="upcoming-auctions">
+            <h2>📅 Upcoming Auctions</h2>
+            <div class="upcoming-grid">
+                <div class="upcoming-card">
+                    <span class="protocol-name">.agentos</span>
+                    <span class="start-time">Starts in 2h 15m</span>
+                    <span class="reserve-price">Reserve: $800K</span>
+                </div>
+                <div class="upcoming-card">
+                    <span class="protocol-name">.equityfirm</span>
+                    <span class="start-time">Starts in 6h 30m</span>
+                    <span class="reserve-price">Reserve: $1.2M</span>
+                </div>
+                <div class="upcoming-card">
+                    <span class="protocol-name">.superchip</span>
+                    <span class="start-time">Starts tomorrow</span>
+                    <span class="reserve-price">Reserve: $3.5M</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Participate -->
+        <section class="participation-info">
+            <h2>🎯 How TLD Investment Works</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">1️⃣</div>
+                    <h3>Invest Like a CD</h3>
+                    <p>Minimum $100 investment to back TLD auctions. Your money goes toward winning premium digital real estate.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">2️⃣</div>
+                    <h3>We Win, You Earn</h3>
+                    <p>When we successfully win TLD auctions, you receive returns based on your investment tier and the TLD's performance.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">3️⃣</div>
+                    <h3>Guaranteed Utility</h3>
+                    <p>Every TLD we acquire gets deployed with real utility - AI agents, protocols, and revenue streams that generate ongoing returns.</p>
+                </div>
+            </div>
+            <div class="cta-section">
+                <button class="cta-primary" onclick="window.location.href='join.html'">
+                    JOIN SYNDICATE TO BID
+                </button>
+                <button class="cta-secondary" onclick="window.location.href='contact.html'">
+                    CONTACT FOR PRIVATE SALE
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="join.html" class="footer-link">Join Syndicate</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <p>&copy; 2024 4 Commas • The Sovereign Wealth Engine of the New Internet</p>
+            </div>
+        </footer>
+
+        <!-- Background Effects -->
+        <div class="page-bg">
+            <div class="money-rain"></div>
+            <div class="glitch-overlay"></div>
+            <div class="matrix-code"></div>
+        </div>
+    </div>
+
+    <!-- Bid Modal -->
+    <div id="bidModal" class="modal">
+        <div class="modal-content">
+            <h3>Place Bid</h3>
+            <p id="bidProtocolName"></p>
+            <div class="bid-form">
+                <label>Your Bid Amount:</label>
+                <input type="number" id="bidAmount" placeholder="Enter bid amount">
+                <div class="bid-buttons">
+                    <button onclick="submitBid()" class="bid-submit">SUBMIT BID</button>
+                    <button onclick="closeBidModal()" class="bid-cancel">CANCEL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Money Canvas Animation (same as main hero)
+        function initMoneyCanvas() {
+            const canvas = document.getElementById('money-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const symbols = ['$', '€', '£', '¥', '₿', '◊'];
+            const particles = [];
+
+            class MoneyParticle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+                    this.speed = Math.random() * 2 + 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                    this.size = Math.random() * 20 + 10;
+                }
+
+                update() {
+                    this.y += this.speed;
+                    if (this.y > canvas.height) {
+                        this.y = -this.size;
+                        this.x = Math.random() * canvas.width;
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = '#A855F7';
+                    ctx.font = `${this.size}px Arial`;
+                    ctx.fillText(this.symbol, this.x, this.y);
+                    ctx.restore();
+                }
+            }
+
+            // Create particles
+            for (let i = 0; i < 50; i++) {
+                particles.push(new MoneyParticle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Initialize money canvas when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initMoneyCanvas();
+        });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script>
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <script src="auctions.js"></script>
+</body>
+</html>

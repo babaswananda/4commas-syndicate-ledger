@@ -245,9 +245,32 @@
             <p>4 Commas Syndicate Ledger • Private Infrastructure Access Agreement</p>
             <p>Last Updated: December 2024</p>
         </footer>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+            <span class="scroll-arrow">↑</span>
+        </button>
     </div>
 
     <script>
+        // Scroll to Top Button
+        window.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (scrollToTopBtn) {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
         // Check if checkboxes are checked
         const agreeTerms = document.getElementById('agreeTerms');
         const confirmEligible = document.getElementById('confirmEligible');

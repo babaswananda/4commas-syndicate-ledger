@@ -561,19 +561,43 @@
         <footer class="tld-footer">
             <p>&copy; 2025 4 Commas Syndicate. All rights reserved.</p>
         </footer>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+            <span class="scroll-arrow">↑</span>
+        </button>
     </div>
 
     <script>
+        // Scroll to Top Button
+        window.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (scrollToTopBtn) {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
         // Check access before loading page
         window.addEventListener('load', () => {
             const hasLandingAccess = localStorage.getItem('landing_access');
             const hasAgreed = localStorage.getItem('syndicate_agreement');
-            
+
             if (hasLandingAccess !== 'granted') {
                 window.location.href = 'landing.html';
                 return;
             }
-            
+
             if (hasAgreed !== 'accepted') {
                 window.location.href = 'agreement.html';
                 return;

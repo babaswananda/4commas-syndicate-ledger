@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Protocol Portfolio - 4 Commas Syndicate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body class="portfolio-page">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="logo-image">
+                <div class="brand-stack">
+                    <span class="tagline">PROTOCOL PORTFOLIO</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="auctions.html" class="nav-link">Live Auctions</a>
+                <a href="join.html" class="nav-link">Join Syndicate</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-cta">
+                <button class="header-btn" onclick="window.location.href='login.html'">MEMBER LOGIN</button>
+            </div>
+        </header>
+
+        <!-- Hero Section with Same Background as Main -->
+        <section class="hero portfolio-hero">
+            <div class="hero-bg">
+                <div class="money-rain"></div>
+                <div class="glitch-overlay"></div>
+                <div class="matrix-code"></div>
+                <canvas id="money-canvas"></canvas>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line">🔒 PROTOCOL PORTFOLIO</span>
+                    <span class="line">3000+ Digital Assets</span>
+                </h1>
+                <p class="hero-description">
+                    Exclusive access to the complete protocol infrastructure portfolio. Real-time analytics, performance metrics, and strategic asset allocation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Authentication Gate -->
+        <div id="authGate" class="auth-gate">
+            <div class="auth-content">
+                <div class="auth-icon">🔒</div>
+                <h1>Exclusive Access Required</h1>
+                <p>The full protocol portfolio is available to syndicate members only.</p>
+                <div class="auth-options">
+                    <button class="auth-btn primary" onclick="window.location.href='login.html'">
+                        Member Login
+                    </button>
+                    <button class="auth-btn secondary" onclick="window.location.href='join.html'">
+                        Join Syndicate
+                    </button>
+                </div>
+                <div class="preview-note">
+                    <p>Preview: 13 protocols shown on main site</p>
+                    <p>Full access: 3000+ protocols with detailed analytics</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Dashboard (Hidden until authenticated) -->
+        <div id="portfolioDashboard" class="portfolio-dashboard" style="display: none;">
+            <!-- Portfolio Header -->
+            <section class="portfolio-header">
+                <div class="portfolio-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">3,247</div>
+                        <div class="stat-label">Total Protocols</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$847M</div>
+                        <div class="stat-label">Est. Portfolio Value</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Active Deployments</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">23</div>
+                        <div class="stat-label">Live Auctions</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Categories -->
+            <section class="portfolio-categories">
+                <h2>Protocol Categories</h2>
+                <div class="category-grid">
+                    <div class="category-card" data-category="identity">
+                        <div class="category-header">
+                            <span class="category-icon">🧪</span>
+                            <h3>Identity Protocols</h3>
+                            <span class="category-count">847 protocols</span>
+                        </div>
+                        <div class="category-preview">
+                            <span class="protocol-tag">.signatureai</span>
+                            <span class="protocol-tag">.textme</span>
+                            <span class="protocol-tag">.digitalidwallet</span>
+                            <span class="protocol-tag">+844 more</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="trade">
+                        <div class="category-header">
+                            <span class="category-icon">🏛️</span>
+                            <h3>Trade Infrastructure</h3>
+                            <span class="category-count">623 protocols</span>
+                        </div>
+                        <div class="category-preview">
+                            <span class="protocol-tag">.chamberofcommerce</span>
+                            <span class="protocol-tag">.ftz</span>
+                            <span class="protocol-tag">.madeinusa</span>
+                            <span class="protocol-tag">+620 more</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="agents">
+                        <div class="category-header">
+                            <span class="category-icon">🤖</span>
+                            <h3>Agent Networks</h3>
+                            <span class="category-count">1,156 protocols</span>
+                        </div>
+                        <div class="category-preview">
+                            <span class="protocol-tag">.aiagents</span>
+                            <span class="protocol-tag">.agentos</span>
+                            <span class="protocol-tag">.vibecoder</span>
+                            <span class="protocol-tag">+1,153 more</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="hardware">
+                        <div class="category-header">
+                            <span class="category-icon">🧠</span>
+                            <h3>Hardware Protocols</h3>
+                            <span class="category-count">334 protocols</span>
+                        </div>
+                        <div class="category-preview">
+                            <span class="protocol-tag">.superchip</span>
+                            <span class="protocol-tag">.neuralprocessor</span>
+                            <span class="protocol-tag">.gpucloud</span>
+                            <span class="protocol-tag">+331 more</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card" data-category="tokenization">
+                        <div class="category-header">
+                            <span class="category-icon">🪙</span>
+                            <h3>Tokenization</h3>
+                            <span class="category-count">287 protocols</span>
+                        </div>
+                        <div class="category-preview">
+                            <span class="protocol-tag">.utilitycoin</span>
+                            <span class="protocol-tag">.fugio</span>
+                            <span class="protocol-tag">.moneyglitch</span>
+                            <span class="protocol-tag">+284 more</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <h2>Recent Portfolio Activity</h2>
+                <div class="activity-feed">
+                    <div class="activity-item">
+                        <div class="activity-icon acquired">📈</div>
+                        <div class="activity-content">
+                            <div class="activity-title">New Acquisition: .biopassport</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                        <div class="activity-value">$2.3M</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon live">🔴</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Live Auction: .sonnet</div>
+                            <div class="activity-time">Current bid: $1.8M</div>
+                        </div>
+                        <div class="activity-status">LIVE</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon deployed">🚀</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Deployment: .aiagents platform</div>
+                            <div class="activity-time">1 day ago</div>
+                        </div>
+                        <div class="activity-value">+$450K revenue</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="auctions.html" class="footer-link">Live Auctions</a>
+                    <a href="join.html" class="footer-link">Join Syndicate</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <p>&copy; 2024 4 Commas • The Sovereign Wealth Engine of the New Internet</p>
+            </div>
+        </footer>
+
+        <!-- Background Effects -->
+        <div class="page-bg">
+            <div class="money-rain"></div>
+            <div class="glitch-overlay"></div>
+            <div class="matrix-code"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+
+        // Check authentication status
+        function checkAuth() {
+            const isLoggedIn = localStorage.getItem('supabase_auth_token') || 
+                             localStorage.getItem('syndicate_member') === 'true';
+            
+            if (isLoggedIn) {
+                document.getElementById('authGate').style.display = 'none';
+                document.getElementById('portfolioDashboard').style.display = 'block';
+                loadPortfolioData();
+            }
+        }
+
+        // Load portfolio data (simulated)
+        function loadPortfolioData() {
+            // Animate stats
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = stat.textContent;
+                stat.textContent = '0';
+                animateNumber(stat, target);
+            });
+        }
+
+        // Animate numbers
+        function animateNumber(element, target) {
+            const isMonetary = target.includes('$');
+            const numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
+            const duration = 2000;
+            const increment = numericTarget / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= numericTarget) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    const displayValue = Math.floor(current);
+                    if (isMonetary) {
+                        element.textContent = '$' + displayValue + 'M';
+                    } else {
+                        element.textContent = displayValue.toLocaleString();
+                    }
+                }
+            }, 16);
+        }
+
+        // Money Canvas Animation (same as main hero)
+        function initMoneyCanvas() {
+            const canvas = document.getElementById('money-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const symbols = ['$', '€', '£', '¥', '₿', '◊'];
+            const particles = [];
+
+            class MoneyParticle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+                    this.speed = Math.random() * 2 + 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                    this.size = Math.random() * 20 + 10;
+                }
+
+                update() {
+                    this.y += this.speed;
+                    if (this.y > canvas.height) {
+                        this.y = -this.size;
+                        this.x = Math.random() * canvas.width;
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = '#A855F7';
+                    ctx.font = `${this.size}px Arial`;
+                    ctx.fillText(this.symbol, this.x, this.y);
+                    ctx.restore();
+                }
+            }
+
+            // Create particles
+            for (let i = 0; i < 50; i++) {
+                particles.push(new MoneyParticle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Initialize on page load
+        window.addEventListener('load', function() {
+            checkAuth();
+            initMoneyCanvas();
+        });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script>
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

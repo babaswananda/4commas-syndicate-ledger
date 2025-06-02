@@ -428,23 +428,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add countdown timer to June 4, 2025
-function startCountdown() {
-    const countdownElement = document.createElement('div');
-    countdownElement.className = 'countdown-timer';
-    countdownElement.innerHTML = `
-        <div class="countdown-content">
-            <span class="countdown-label">SYNDICATE LAUNCH:</span>
-            <span class="countdown-time" id="countdown-display"></span>
-        </div>
-    `;
+// Enhanced countdown timer for header
+function startMainCountdown() {
+    const countdownElement = document.getElementById('countdown');
+    if (!countdownElement) return;
 
-    // Insert after header
-    const header = document.querySelector('.header');
-    header.insertAdjacentElement('afterend', countdownElement);
-
-    // Set target date: Wednesday, June 4, 2025 at 12:00 PM EST
-    const targetDate = new Date('June 4, 2025 12:00:00 EST').getTime();
+    // Set target date: 24 hours from now (rolling countdown)
+    const targetDate = new Date().getTime() + (24 * 60 * 60 * 1000);
 
     const timer = setInterval(() => {
         const now = new Date().getTime();
@@ -452,22 +442,24 @@ function startCountdown() {
 
         if (distance < 0) {
             clearInterval(timer);
-            document.getElementById('countdown-display').innerHTML = 'LIVE NOW';
+            countdownElement.innerHTML = 'EXPIRED';
+            countdownElement.style.color = '#EF4444';
             return;
         }
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const hours = Math.floor(distance / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('countdown-display').innerHTML =
-            `${days}d ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        countdownElement.innerHTML =
+            `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }, 1000);
 }
 
-// Activate countdown to June 4, 2025
-startCountdown();
+// Start main countdown when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    startMainCountdown();
+});
 
 // Protocol Showcase Functionality
 document.addEventListener('DOMContentLoaded', function() {
@@ -588,10 +580,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // Scroll to Top Button
 window.addEventListener('scroll', function() {
     const scrollToTopBtn = document.getElementById('scrollToTop');
-    if (window.pageYOffset > 300) {
-        scrollToTopBtn.classList.add('visible');
-    } else {
-        scrollToTopBtn.classList.remove('visible');
+    if (scrollToTopBtn) {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
     }
 });
 
@@ -601,6 +595,39 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
+// Side Menu Functionality
+let sideMenuOpen = false;
+
+function toggleSideMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('sideMenuOverlay');
+    const body = document.body;
+
+    sideMenuOpen = !sideMenuOpen;
+
+    if (sideMenuOpen) {
+        sideMenu.classList.add('open');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+    } else {
+        sideMenu.classList.remove('open');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    }
+}
+
+// Close side menu when clicking on a navigation link
+document.addEventListener('DOMContentLoaded', function() {
+    const sideNavLinks = document.querySelectorAll('.side-nav-link');
+    sideNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (this.getAttribute('href').startsWith('#')) {
+                toggleSideMenu();
+            }
+        });
+    });
+});
 
 // Chat Agent Functionality
 let chatOpen = false;

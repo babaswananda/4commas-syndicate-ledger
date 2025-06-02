@@ -34,16 +34,26 @@
             </nav>
         </header>
 
+        <!-- Hero Section with Same Background as Main -->
+        <section class="hero contact-hero">
+            <div class="hero-bg">
+                <div class="money-rain"></div>
+                <div class="glitch-overlay"></div>
+                <div class="matrix-code"></div>
+                <canvas id="money-canvas"></canvas>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line">📡 Contact & Access</span>
+                </h1>
+                <p class="hero-description">
+                    You're not here by accident. This page is only shared with a select group of early operators, investors, and infrastructure allies. If you're reading this, you're being offered a chance to take position before public launch.
+                </p>
+            </div>
+        </section>
+
         <!-- Contact Content -->
         <main class="contact-main">
-            <!-- Exclusive Access Section -->
-            <section class="exclusive-access">
-                <h1 class="contact-title">📡 Contact & Access</h1>
-                <div class="access-message">
-                    <p class="access-intro"><strong>You're not here by accident.</strong></p>
-                    <p class="access-desc">This page is only shared with a select group of early operators, investors, and infrastructure allies. If you're reading this, you're being offered a chance to take position before public launch.</p>
-                </div>
-            </section>
 
             <!-- Contact Methods -->
             <section class="contact-methods">
@@ -113,7 +123,19 @@
                     <div class="payment-option glow-effect">
                         <div class="payment-icon">₿</div>
                         <h3>Crypto</h3>
-                        <p>USDC / ETH / BTC accepted</p>
+                        <p>Bitcoin & Lightning Network accepted</p>
+                        <div class="crypto-addresses">
+                            <div class="crypto-address">
+                                <span class="address-label">BTC Wallet:</span>
+                                <span class="address-value" onclick="copyToClipboard('bc1qh7evvhzmt3r8vu5sf5wencs93gmtlqkwpyy5el')">bc1qh7evvhzmt3r8vu5sf5wencs93gmtlqkwpyy5el</span>
+                                <button class="copy-btn" onclick="copyToClipboard('bc1qh7evvhzmt3r8vu5sf5wencs93gmtlqkwpyy5el')">📋</button>
+                            </div>
+                            <div class="crypto-address">
+                                <span class="address-label">Lightning:</span>
+                                <span class="address-value lightning" onclick="copyToClipboard('lnbc1p5rem7rdqdgdshx6pqg9c8qpp5uhvg2z4jpgnfvpfn65y7yrww024s004jcu885ugdzcyzpa6wr4qssp5m2ew93ffl5s7qgtp84heauvfjpe05hr0lre6ye9fqdy3ssr2e8gs9qrsgqcqpcxqy8ayqrzjqfzhphca8jlc5zznw52mnqxsnymltjgg3lxe4ul82g42vw0jpkgkwpmtjyqqjssqqvqqqqqqqqqqqqqq9grzjqv06k0m23t593pngl0jt7n9wznp64fqngvctz7vts8nq4tukvtljqz5e3qqqgzqqqcqqqqqqqqqqqqqq9gstw6uzxwtq5fkl9camlrd6z0zullfntv8dgcrwrmky0y34gf6q3r24z5a0ww66au5tka4stmypz25e8lckhr7c0u7g4clae6f4f5xycqr9fcrs')">lnbc1p5rem7r...</span>
+                                <button class="copy-btn" onclick="copyToClipboard('lnbc1p5rem7rdqdgdshx6pqg9c8qpp5uhvg2z4jpgnfvpfn65y7yrww024s004jcu885ugdzcyzpa6wr4qssp5m2ew93ffl5s7qgtp84heauvfjpe05hr0lre6ye9fqdy3ssr2e8gs9qrsgqcqpcxqy8ayqrzjqfzhphca8jlc5zznw52mnqxsnymltjgg3lxe4ul82g42vw0jpkgkwpmtjyqqjssqqvqqqqqqqqqqqqqq9grzjqv06k0m23t593pngl0jt7n9wznp64fqngvctz7vts8nq4tukvtljqz5e3qqqgzqqqcqqqqqqqqqqqqqq9gstw6uzxwtq5fkl9camlrd6z0zullfntv8dgcrwrmky0y34gf6q3r24z5a0ww66au5tka4stmypz25e8lckhr7c0u7g4clae6f4f5xycqr9fcrs')">📋</button>
+                            </div>
+                        </div>
                         <span class="payment-status">✅ Available</span>
                     </div>
                 </div>
@@ -191,11 +213,47 @@
 
         <!-- Background Effects -->
         <div class="contact-bg">
+            <div class="money-rain"></div>
+            <div class="glitch-overlay"></div>
+            <div class="matrix-code"></div>
             <div class="bg-glow"></div>
         </div>
     </div>
 
     <script>
+        // Copy to clipboard function
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                showCopyNotification('Copied to clipboard!');
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showCopyNotification('Copied to clipboard!');
+            });
+        }
+
+        function showCopyNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'copy-notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+
         // Check landing access and agreement before loading page
         window.addEventListener('load', () => {
             // Temporarily commented out for testing
@@ -213,6 +271,101 @@
                 return;
             }
             */
+        });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script>
+        // Money Canvas Animation (same as main hero)
+        function initMoneyCanvas() {
+            const canvas = document.getElementById('money-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const symbols = ['$', '€', '£', '¥', '₿', '◊'];
+            const particles = [];
+
+            class MoneyParticle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+                    this.speed = Math.random() * 2 + 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                    this.size = Math.random() * 20 + 10;
+                }
+
+                update() {
+                    this.y += this.speed;
+                    if (this.y > canvas.height) {
+                        this.y = -this.size;
+                        this.x = Math.random() * canvas.width;
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = '#A855F7';
+                    ctx.font = `${this.size}px Arial`;
+                    ctx.fillText(this.symbol, this.x, this.y);
+                    ctx.restore();
+                }
+            }
+
+            // Create particles
+            for (let i = 0; i < 50; i++) {
+                particles.push(new MoneyParticle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize money canvas when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initMoneyCanvas();
         });
     </script>
 </body>
