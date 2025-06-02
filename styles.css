@@ -6692,6 +6692,106 @@ blockquote {
     letter-spacing: 0.5px;
 }
 
+/* Contact Page New Sections */
+.gate-section, .target-section, .stack-section, .signin-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.gate-section h2, .target-section h2, .stack-section h2, .signin-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.gate-section p, .target-section p, .stack-section p, .signin-section p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.gate-features, .signin-benefits {
+    display: grid;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-item, .signin-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover, .signin-item:hover {
+    border-color: #A855F7;
+    background: rgba(168, 85, 247, 0.1);
+    transform: translateY(-2px);
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.target-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.target-item:hover {
+    border-color: #A855F7;
+    background: rgba(168, 85, 247, 0.1);
+    transform: translateY(-2px);
+}
+
+.target-disclaimer {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+}
+
+.protocol-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.protocol-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.protocol-item:hover {
+    border-color: #A855F7;
+    background: rgba(168, 85, 247, 0.1);
+    transform: translateY(-2px);
+}
+
 /* COMPREHENSIVE MOBILE RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     /* Container and Layout */
