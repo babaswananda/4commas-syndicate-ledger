@@ -674,7 +674,7 @@ body::after {
 /* Hero Title */
 .hero-title {
     font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
-    font-size: clamp(64px, 12vw, 128px);
+    font-size: clamp(77px, 14.4vw, 154px);
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 32px;
@@ -6690,6 +6690,101 @@ blockquote {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+/* Portfolio Examples - 2 Column Layout */
+.portfolio-examples {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.portfolio-examples h4 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-column {
+    text-align: left;
+}
+
+.portfolio-category {
+    margin-bottom: 40px;
+}
+
+.portfolio-category h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #A855F7;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(168, 85, 247, 0.3);
+}
+
+.protocol-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.protocol-example {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 8px;
+    padding: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+.protocol-example:hover {
+    border-color: #A855F7;
+    background: rgba(168, 85, 247, 0.1);
+    transform: translateY(-2px);
+}
+
+.protocol-example.flagship {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
+    border: 2px solid #A855F7;
+    font-weight: 600;
+}
+
+.featured-protocol {
+    border: 2px solid rgba(168, 85, 247, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    background: rgba(168, 85, 247, 0.05);
+}
+
+.featured-protocol h5 {
+    color: #EC4899;
+    border-bottom-color: rgba(236, 72, 153, 0.5);
+}
+
+/* Mobile responsive for portfolio grid */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .portfolio-examples h4 {
+        font-size: 24px;
+    }
+
+    .portfolio-category h5 {
+        font-size: 18px;
+    }
 }
 
 /* Contact Page New Sections */
