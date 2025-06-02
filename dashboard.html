@@ -28,11 +28,51 @@
 
         <!-- Dashboard Content -->
         <main class="dashboard-main">
+            <!-- Founder Message Modal (shows on first login) -->
+            <div class="founder-modal" id="founderModal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>🎁 Because You Believed First...</h2>
+                        <button class="modal-close" onclick="closeFounderModal()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>You didn't just support an idea. You helped build the New Internet — and that changes everything.</p>
+                        <div class="founder-gifts">
+                            <div class="gift-item">
+                                <span class="gift-icon">🏅</span>
+                                <div class="gift-details">
+                                    <h4>Protocol Founders Badge</h4>
+                                    <p>NFT verifying "Protocol Founder – Phase 0"</p>
+                                    <span class="gift-status claimed">✅ Claimed</span>
+                                </div>
+                            </div>
+                            <div class="gift-item">
+                                <span class="gift-icon">🪪</span>
+                                <div class="gift-details">
+                                    <h4>Custom Handle</h4>
+                                    <p>Pre-registered TLD subdomain (e.g. yourname.signatureai)</p>
+                                    <span class="gift-status available">🔓 Available</span>
+                                </div>
+                            </div>
+                            <div class="gift-item">
+                                <span class="gift-icon">🪙</span>
+                                <div class="gift-details">
+                                    <h4>Early Coin Drop</h4>
+                                    <p>Fixed allocation of $UtilityCoin or Fugio Token</p>
+                                    <span class="gift-status available">🔓 Available</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="claim-gifts-btn" onclick="closeFounderModal()">View All Gifts</button>
+                    </div>
+                </div>
+            </div>
+
             <!-- User Status Card -->
             <section class="status-card">
                 <div class="status-header">
                     <h2>🏛️ Your Syndicate Status</h2>
-                    <div class="tier-badge" id="tierBadge">ARCHITECT</div>
+                    <div class="tier-badge founder" id="tierBadge">🔓 VERIFIED GENESIS BACKER</div>
                 </div>
                 <div class="status-grid">
                     <div class="status-item">
@@ -225,11 +265,29 @@
                 behavior: 'smooth'
             });
         }
+        // Founder Modal Functions
+        function closeFounderModal() {
+            document.getElementById('founderModal').style.display = 'none';
+            localStorage.setItem('founder_modal_seen', 'true');
+        }
+
+        function showFounderModal() {
+            const modalSeen = localStorage.getItem('founder_modal_seen');
+            if (!modalSeen) {
+                setTimeout(() => {
+                    document.getElementById('founderModal').style.display = 'flex';
+                }, 1000); // Show after 1 second
+            }
+        }
+
         // Check access before loading page
         window.addEventListener('load', () => {
             const hasAccess = localStorage.getItem('syndicate_access');
             if (hasAccess !== 'granted') {
                 window.location.href = 'access-gate.html';
+            } else {
+                // Show founder modal for first-time visitors
+                showFounderModal();
             }
         });
     </script>

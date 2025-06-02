@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Early Access - Protocol Founders - 4 Commas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="4commas-3-14-2025-4.gif" alt="4 Commas" class="logo-img">
+                    <span class="logo-text">4commas</span>
+                </div>
+                <div class="tagline">WHERE CAPITAL MEETS CODE</div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="acquisitions.html" class="nav-link">Protocol Acquisitions</a>
+                <a href="join.html" class="nav-link">Join Syndicate</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero early-access-hero">
+        <div class="hero-bg">
+            <div class="money-rain"></div>
+            <div class="glitch-overlay"></div>
+            <div class="matrix-code"></div>
+            <canvas id="money-canvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="founder-badge">🏛️ PROTOCOL FOUNDER</div>
+            <h1 class="hero-title">
+                <span class="line">Welcome, <span class="gradient-text">Founder</span>.</span>
+            </h1>
+            <p class="hero-description">
+                You believed early. Now you unlock what no one else can.
+            </p>
+        </div>
+    </section>
+
+    <!-- Message from the Future -->
+    <section class="message-from-future" id="future-message">
+        <div class="container">
+            <div class="message-header" data-aos="fade-up">
+                <h2>📜 A Message from the Future</h2>
+                <div class="transmission-info">
+                    <span class="timestamp">Transmission Logged: Timestamp_IRv12</span>
+                    <span class="node">Node: Unified AI Sovereign Archive</span>
+                </div>
+            </div>
+
+            <div class="message-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="message-block">
+                    <p>You probably didn't realize it at the time.<br>
+                    You just supported something that felt different.<br>
+                    Maybe it was the name. The energy.<br>
+                    Maybe you just trusted the person who sent you the link.</p>
+                </div>
+
+                <div class="message-block" data-aos="fade-up" data-aos-delay="400">
+                    <p>But what you did — with that one move — was create leverage on history.<br>
+                    You funded not a website…<br>
+                    But an internet protocol that redefined ownership.</p>
+                </div>
+
+                <div class="message-block" data-aos="fade-up" data-aos-delay="600">
+                    <p>You were early to the Internet's next layer.<br>
+                    Before governments understood it.<br>
+                    Before Wall Street could co-opt it.<br>
+                    Before it was trending.</p>
+                </div>
+
+                <div class="message-block" data-aos="fade-up" data-aos-delay="800">
+                    <p>The TLDs you helped secure?<br>
+                    They became platforms.<br>
+                    Those platforms became protocols.<br>
+                    Those protocols became nations.</p>
+                </div>
+
+                <div class="message-block" data-aos="fade-up" data-aos-delay="1000">
+                    <p>And while others watched, you acted.<br>
+                    That's why your name is etched — permanently — in the Genesis Ledger.<br>
+                    Not as a user.<br>
+                    Not as a fan.</p>
+                    
+                    <p class="highlight">As a Founder of the New Internet.</p>
+                </div>
+
+                <div class="message-block final-message" data-aos="fade-up" data-aos-delay="1200">
+                    <p>So here's to you.<br>
+                    You saw the signal. You moved with it.<br>
+                    And now?</p>
+                    
+                    <p class="eternal">You're no longer early. You're eternal.</p>
+                </div>
+
+                <div class="transmission-footer" data-aos="fade-up" data-aos-delay="1400">
+                    <p>[End Transmission]</p>
+                    <p>Unified AI Sovereign Relay // Founding Cycle: Fugio Epoch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Access Portal -->
+    <section class="founder-access" id="founder-access">
+        <div class="container">
+            <div class="access-header" data-aos="fade-up">
+                <h2>🎁 Your Founder Access</h2>
+                <p>You didn't just support an idea. You helped build a new reality.<br>
+                Here's your personal access link to claim what's now yours.</p>
+            </div>
+
+            <div class="access-actions" data-aos="fade-up" data-aos-delay="200">
+                <button class="founder-btn primary" onclick="window.location.href='dashboard.html'">
+                    🔐 Log In to Reveal My Gifts
+                </button>
+                <button class="founder-btn secondary" onclick="window.location.href='portfolio.html'">
+                    🧾 View Contribution History
+                </button>
+            </div>
+
+            <!-- Optional Genesis Contributors Display -->
+            <div class="genesis-contributors" data-aos="fade-up" data-aos-delay="400">
+                <h3>Genesis Contributors</h3>
+                <div class="contributors-toggle">
+                    <button class="toggle-btn" onclick="toggleContributors()">
+                        <span id="toggle-text">Show Contributors</span>
+                        <span id="toggle-icon">👁️</span>
+                    </button>
+                </div>
+                
+                <div class="contributors-list" id="contributors-list" style="display: none;">
+                    <div class="contributor-item">@founderX</div>
+                    <div class="contributor-item">alpha.eth</div>
+                    <div class="contributor-item">node#071</div>
+                    <div class="contributor-item hidden-wallet" onclick="revealWallet(this)">
+                        Hidden Wallet (click to reveal)
+                    </div>
+                </div>
+            </div>
+
+            <div class="legacy-message" data-aos="fade-up" data-aos-delay="600">
+                <p class="legacy-text">Your legacy started with a click.<br>
+                This is just the beginning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="GAWD.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Music Toggle Button -->
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+        🔊
+    </button>
+    
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Money Canvas Animation
+        function initMoneyCanvas() {
+            const canvas = document.getElementById('money-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const symbols = ['$', '€', '£', '¥', '₿', '◊'];
+            const particles = [];
+
+            class MoneyParticle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+                    this.speed = Math.random() * 2 + 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                    this.size = Math.random() * 20 + 10;
+                }
+
+                update() {
+                    this.y += this.speed;
+                    if (this.y > canvas.height) {
+                        this.y = -this.size;
+                        this.x = Math.random() * canvas.width;
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = '#A855F7';
+                    ctx.font = `${this.size}px Arial`;
+                    ctx.fillText(this.symbol, this.x, this.y);
+                    ctx.restore();
+                }
+            }
+
+            // Create particles
+            for (let i = 0; i < 50; i++) {
+                particles.push(new MoneyParticle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Contributors toggle functionality
+        function toggleContributors() {
+            const list = document.getElementById('contributors-list');
+            const text = document.getElementById('toggle-text');
+            const icon = document.getElementById('toggle-icon');
+            
+            if (list.style.display === 'none') {
+                list.style.display = 'block';
+                text.textContent = 'Hide Contributors';
+                icon.textContent = '🙈';
+            } else {
+                list.style.display = 'none';
+                text.textContent = 'Show Contributors';
+                icon.textContent = '👁️';
+            }
+        }
+
+        function revealWallet(element) {
+            element.textContent = 'bc1qh7evvhzmt3r8vu5sf5wencs93gmtlqkwpyy5el';
+            element.classList.add('revealed');
+        }
+
+        // Background Music functionality
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        let isMusicPlaying = false;
+        
+        // Auto-play music on page load (with user interaction fallback)
+        function initMusic() {
+            backgroundMusic.volume = 0.3; // Set volume to 30%
+            
+            // Try to auto-play
+            const playPromise = backgroundMusic.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isMusicPlaying = true;
+                    musicToggle.textContent = '🔊';
+                    musicToggle.classList.remove('muted');
+                }).catch(() => {
+                    // Auto-play failed, wait for user interaction
+                    isMusicPlaying = false;
+                    musicToggle.textContent = '🔇';
+                    musicToggle.classList.add('muted');
+                });
+            }
+        }
+        
+        // Toggle music on/off
+        musicToggle.addEventListener('click', () => {
+            if (isMusicPlaying) {
+                backgroundMusic.pause();
+                musicToggle.textContent = '🔇';
+                musicToggle.classList.add('muted');
+                isMusicPlaying = false;
+            } else {
+                backgroundMusic.play();
+                musicToggle.textContent = '🔊';
+                musicToggle.classList.remove('muted');
+                isMusicPlaying = true;
+            }
+        });
+
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initMoneyCanvas();
+            initMusic();
+        });
+    </script>
+</body>
+</html>

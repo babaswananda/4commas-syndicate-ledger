@@ -6290,6 +6290,408 @@ blockquote {
     box-shadow: 0 6px 25px rgba(107, 114, 128, 0.5);
 }
 
+/* Early Access / Founder Page Styles */
+.early-access-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.founder-badge {
+    background: linear-gradient(135deg, #A855F7, #EC4899);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    display: inline-block;
+}
+
+.message-from-future {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    position: relative;
+}
+
+.message-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.message-header h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.transmission-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #A855F7;
+    margin-top: 16px;
+}
+
+.message-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-block {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 32px;
+    backdrop-filter: blur(10px);
+}
+
+.message-block p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 24px;
+}
+
+.message-block p:last-child {
+    margin-bottom: 0;
+}
+
+.message-block .highlight {
+    color: #A855F7;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.message-block .eternal {
+    color: #EC4899;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+
+.final-message {
+    border: 2px solid #A855F7;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+}
+
+.transmission-footer {
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #A855F7;
+    font-size: 14px;
+}
+
+.founder-access {
+    padding: 120px 0;
+    background: #0a0a0a;
+}
+
+.access-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.access-header h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.access-header p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.access-actions {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.founder-btn {
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.founder-btn.primary {
+    background: linear-gradient(135deg, #A855F7, #EC4899);
+    color: white;
+}
+
+.founder-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+}
+
+.founder-btn.secondary {
+    background: transparent;
+    color: #A855F7;
+    border: 2px solid #A855F7;
+}
+
+.founder-btn.secondary:hover {
+    background: #A855F7;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.genesis-contributors {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.genesis-contributors h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.toggle-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    color: #A855F7;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.contributors-list {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.contributor-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+
+.hidden-wallet {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hidden-wallet:hover {
+    border-color: #A855F7;
+    color: #A855F7;
+}
+
+.hidden-wallet.revealed {
+    background: rgba(168, 85, 247, 0.1);
+    border-color: #A855F7;
+    color: #A855F7;
+}
+
+.legacy-message {
+    text-align: center;
+}
+
+.legacy-text {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Founder Modal Styles */
+.founder-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #A855F7;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.modal-header h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 32px;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.modal-body p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.founder-gifts {
+    margin-bottom: 30px;
+}
+
+.gift-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.gift-item:hover {
+    border-color: #A855F7;
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.gift-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.gift-details {
+    flex: 1;
+}
+
+.gift-details h4 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.gift-details p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.gift-status {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.gift-status.claimed {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.gift-status.available {
+    background: rgba(168, 85, 247, 0.2);
+    color: #A855F7;
+}
+
+.claim-gifts-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #A855F7, #EC4899);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.claim-gifts-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+}
+
+/* Founder tier badge styling */
+.tier-badge.founder {
+    background: linear-gradient(135deg, #A855F7, #EC4899);
+    color: white;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 /* COMPREHENSIVE MOBILE RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     /* Container and Layout */
