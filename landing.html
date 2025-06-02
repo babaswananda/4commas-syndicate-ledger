@@ -76,7 +76,7 @@
                 <h3 class="section-title">🔑 What's Behind This Gate?</h3>
                 <p class="section-intro">If you've been invited here, you're looking at:</p>
                 <ul class="feature-list">
-                    <li>🔐 Early access to live auctions on rare internet assets</li>
+                    <li>🔐 Early access to infrastructure acquisitions on rare internet assets</li>
                     <li>🧠 Full-stack infrastructure: AI, crypto, manufacturing, export, chat agents</li>
                     <li>📜 Verified portfolio of over 3000+ protocol-level TLDs</li>
                     <li>📈 Private offerings before public listings</li>
@@ -155,7 +155,7 @@
                 <ul class="unlock-list">
                     <li>📂 Your investor dashboard</li>
                     <li>📄 Downloadable deal sheets + whitepapers</li>
-                    <li>🪙 Active auction listings and next drop calendar</li>
+                    <li>🪙 Active acquisition listings and next drop calendar</li>
                     <li>🎟️ Access to live calls, walkthroughs, and private showings</li>
                     <li>🔐 Full details on licensing, token tiers, and protocol strategy</li>
                 </ul>
@@ -205,8 +205,22 @@
 
         <!-- Background Effects -->
         <div class="landing-bg">
+            <div class="money-rain"></div>
+            <div class="glitch-overlay"></div>
+            <div class="matrix-code"></div>
+            <canvas id="money-canvas"></canvas>
             <div class="bg-glow"></div>
         </div>
+
+        <!-- Background Music -->
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="GAWD.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Music Toggle Button -->
+        <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+            🔊
+        </button>
 
         <!-- Scroll to Top Button -->
         <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
@@ -402,8 +416,118 @@
             }, 1000);
         }
 
+        // Money Canvas Animation
+        function initMoneyCanvas() {
+            const canvas = document.getElementById('money-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const symbols = ['$', '€', '£', '¥', '₿', '◊'];
+            const particles = [];
+
+            class MoneyParticle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+                    this.speed = Math.random() * 2 + 0.5;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                    this.size = Math.random() * 20 + 10;
+                }
+
+                update() {
+                    this.y += this.speed;
+                    if (this.y > canvas.height) {
+                        this.y = -this.size;
+                        this.x = Math.random() * canvas.width;
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = '#A855F7';
+                    ctx.font = `${this.size}px Arial`;
+                    ctx.fillText(this.symbol, this.x, this.y);
+                    ctx.restore();
+                }
+            }
+
+            // Create particles
+            for (let i = 0; i < 50; i++) {
+                particles.push(new MoneyParticle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Background Music functionality
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        let isMusicPlaying = false;
+
+        // Auto-play music on page load (with user interaction fallback)
+        function initMusic() {
+            backgroundMusic.volume = 0.3; // Set volume to 30%
+
+            // Try to auto-play
+            const playPromise = backgroundMusic.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isMusicPlaying = true;
+                    musicToggle.textContent = '🔊';
+                    musicToggle.classList.remove('muted');
+                }).catch(() => {
+                    // Auto-play failed, wait for user interaction
+                    isMusicPlaying = false;
+                    musicToggle.textContent = '🔇';
+                    musicToggle.classList.add('muted');
+                });
+            }
+        }
+
+        // Toggle music on/off
+        musicToggle.addEventListener('click', () => {
+            if (isMusicPlaying) {
+                backgroundMusic.pause();
+                musicToggle.textContent = '🔇';
+                musicToggle.classList.add('muted');
+                isMusicPlaying = false;
+            } else {
+                backgroundMusic.play();
+                musicToggle.textContent = '🔊';
+                musicToggle.classList.remove('muted');
+                isMusicPlaying = true;
+            }
+        });
+
         // Add some interactive effects
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize money canvas and music
+            initMoneyCanvas();
+            initMusic();
+
             // Animate elements on scroll
             const observerOptions = {
                 threshold: 0.1,
