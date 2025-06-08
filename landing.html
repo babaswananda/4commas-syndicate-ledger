@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- 21st.dev Components -->
     <script src="https://unpkg.com/@21st-dev/components@latest/dist/21st-components.js"></script>
+    <!-- Spline 3D Scene - Latest Version -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
     <style>
         /* 21st.dev Purple Theme Override */
         :root {
@@ -16,9 +18,29 @@
             --primary-light: rgba(168, 85, 247, 0.1);
             --primary-border: rgba(168, 85, 247, 0.3);
         }
+        
+        /* Spline Scene Styling */
+        spline-viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            pointer-events: none;
+            background: linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #c026d3 100%);
+        }
+        
+        /* Fallback background in case Spline takes time to load */
+        body.landing-page {
+            background: linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #c026d3 100%);
+        }
     </style>
 </head>
 <body class="landing-page">
+    <!-- Spline 3D Background with loading optimization -->
+    <spline-viewer url="https://prod.spline.design/GXMvk1yD7tdlTpch/scene.splinecode" loading="lazy"></spline-viewer>
+    
     <div class="landing-container">
         <!-- Header -->
         <header class="landing-header modern-header">
@@ -202,15 +224,6 @@
         <footer class="landing-footer">
             <p>This is Door Zero. Everything else lives behind it.</p>
         </footer>
-
-        <!-- Background Effects -->
-        <div class="landing-bg">
-            <div class="money-rain"></div>
-            <div class="glitch-overlay"></div>
-            <div class="matrix-code"></div>
-            <canvas id="money-canvas"></canvas>
-            <div class="bg-glow"></div>
-        </div>
 
         <!-- Background Music -->
         <audio id="backgroundMusic" loop preload="auto">
@@ -416,71 +429,6 @@
             }, 1000);
         }
 
-        // Money Canvas Animation
-        function initMoneyCanvas() {
-            const canvas = document.getElementById('money-canvas');
-            if (!canvas) return;
-
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-
-            const symbols = ['$', '€', '£', '¥', '₿', '◊'];
-            const particles = [];
-
-            class MoneyParticle {
-                constructor() {
-                    this.x = Math.random() * canvas.width;
-                    this.y = Math.random() * canvas.height;
-                    this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
-                    this.speed = Math.random() * 2 + 0.5;
-                    this.opacity = Math.random() * 0.5 + 0.1;
-                    this.size = Math.random() * 20 + 10;
-                }
-
-                update() {
-                    this.y += this.speed;
-                    if (this.y > canvas.height) {
-                        this.y = -this.size;
-                        this.x = Math.random() * canvas.width;
-                    }
-                }
-
-                draw() {
-                    ctx.save();
-                    ctx.globalAlpha = this.opacity;
-                    ctx.fillStyle = '#A855F7';
-                    ctx.font = `${this.size}px Arial`;
-                    ctx.fillText(this.symbol, this.x, this.y);
-                    ctx.restore();
-                }
-            }
-
-            // Create particles
-            for (let i = 0; i < 50; i++) {
-                particles.push(new MoneyParticle());
-            }
-
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-                particles.forEach(particle => {
-                    particle.update();
-                    particle.draw();
-                });
-
-                requestAnimationFrame(animate);
-            }
-
-            animate();
-
-            // Resize handler
-            window.addEventListener('resize', () => {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            });
-        }
-
         // Background Music functionality
         const backgroundMusic = document.getElementById('backgroundMusic');
         const musicToggle = document.getElementById('musicToggle');
@@ -524,8 +472,7 @@
 
         // Add some interactive effects
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize money canvas and music
-            initMoneyCanvas();
+            // Initialize music
             initMusic();
 
             // Animate elements on scroll
